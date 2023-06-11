@@ -1,0 +1,7 @@
+env
+.env
+model
+.model
+runs
+.runs
+.vscode/settings.json
