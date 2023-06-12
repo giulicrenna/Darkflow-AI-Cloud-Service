@@ -2,8 +2,8 @@ env
 .env
 venv
 .venv
-model
-.model
+model/*
+.model/*
 runs
 .runs
 .vscode/settings.json

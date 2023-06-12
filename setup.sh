@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt-get install python3 python3-pip
+apt-get install -y libgl1-mesa-dev
+
 mkdir /etc/darkflow_weed
 
 cp -r ./ /etc/darkflow_weed
@@ -12,5 +15,5 @@ cd /etc/darkflow_weed
 
 echo "INSTALANDO DEPENDENCIAS"
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 

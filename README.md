@@ -1,2 +1,10 @@
 # Darkflow-Weed-AI
- Setup script for ultralytics YoloV5 model training into Raspberry Pi 4
+---
+
+Ubuntu services for continuous object detection with YOLOv8 models and openCV
+
+## Dependencies
+
+- python3
+- python3-pip
+- libgl1-mesa-dev
