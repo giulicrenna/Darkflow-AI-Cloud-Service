@@ -3,6 +3,8 @@ import supervision as sv
 import cv2
 import os
 
+ABS_PATH : str = os.getcwd()
+
 os.environ["YOLOv5_VERBOSE"] = "False"
 
 os.system('clear')
@@ -15,7 +17,8 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
-    model = YOLO("model/yolov5nu.pt")
+    #model = YOLO(f"{ABS_PATH}/model/best.pt")
+    model = YOLO("yolov5m.pt")
 
     box_annotator = sv.BoxAnnotator(
         thickness=2,
@@ -51,14 +54,21 @@ def main():
         cv2.imshow("yolov8", frame)
 
         if (cv2.waitKey(30) == 27): 
-            break
+           break
             
     cap.release()
     cv2.destroyAllWindows()
     
 if __name__ == "__main__":
     main()
-
-
+    while True:
+        try:
+            pass
+        except Exception as e:
+            if e == KeyboardInterrupt:
+                break
+            else:
+                pass
+    
 
 
