@@ -1,0 +1,7 @@
+#!/bin/bash
+
+clear
+
+python3 /etc/darkflow_weed/main.py yolov5mu.pt
+
+exit 0
