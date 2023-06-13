@@ -2,6 +2,6 @@
 
 clear
 
-python3 /etc/darkflow_weed/main.py yolov5mu.pt
+python3 /etc/darkflow_weed/main.py
 
 exit 0

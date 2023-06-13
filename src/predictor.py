@@ -1,4 +1,5 @@
 import os
+import socket
 import json
 
 from ultralytics import YOLO
@@ -13,12 +14,13 @@ ABS_PATH : str = os.getcwd()
 
 class Predictor:
     def __init__(self,
-                 camera_port : int = 0,
+                 camera_port : str = '0',
                  model_name : str = "darkflow-weed-yolov8l.pt",
                  mqtt_address : str = "test.mosquitto.org",
                  mqtt_topic : str = "darkflowtest",
                  mqtt_port : int = 1883,
-                 tcp_port : int = 25400) -> None:
+                 tcp_port : int = 25400,
+                 show : bool = False) -> None:
         
         self.camera_port = camera_port
         self.model_name = model_name
@@ -26,12 +28,39 @@ class Predictor:
         self.mqtt_topic = mqtt_topic
         self.mqtt_port = mqtt_port
         self.tcp_port = tcp_port
+        self.show = show
         
+        self.parse_args()    
+        
+        print(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
+            \n\t-mqtt_address:{mqtt_address}\n\t-mqtt_topic:{mqtt_topic}\n\t-mqtt_port:{mqtt_port}\n\t-tcp_port:{tcp_port}\n')
+          
         self.mqtt_client : object = self.setup_mqtt()
         self.predictor_model : object = self.load_model()
         
         self.flag = True
         
+    def parse_args(self) -> None:
+        if self.camera_port == 'None':
+            self.camera_port = 0
+        elif self.camera_port in ['0', '1', '2', '3', '4']:
+            self.camera_port = int(self.camera_port)
+            
+        if self.model_name == 'None':
+            self.model_name = 'darkflow-weed-yolov8l.pt'
+            
+        if self.mqtt_address == 'None':
+            self.mqtt_address = 'test.mosquitto.org'
+            
+        if self.mqtt_topic == 'None':
+            self.mqtt_topic = 'darkflowtest'
+            
+        if self.mqtt_port == 'None':
+            self.mqtt_port = 1883
+            
+        if self.tcp_port == 'None':
+            self.tcp_port = 25400
+    
     def load_model(self) -> object:
         try:
             print(f'Cargando modelo {self.model_name}')
@@ -61,6 +90,12 @@ class Predictor:
     def publish(self, message : str = '\{\}') -> None:
         if self.mqtt_client != None:
             self.mqtt_client.publish(self.mqtt_topic, message)
+    
+    def setup_tcp_socket(self) -> object:
+        ...
+        
+    def send_tcp_message(self, message : str = '\{\}') -> object:
+        ...
     
     def single_prediction(self) -> None:
         cap = cv2.VideoCapture(self.camera_port)
@@ -109,6 +144,12 @@ class Predictor:
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
+        if self.show:
+            box_annotator = sv.BoxAnnotator(
+                                    thickness=2,
+                                    text_thickness=2,
+                                    text_scale=1
+                                )
         while self.flag:
             ret, frame = cap.read()
             result = self.predictor_model(frame,
@@ -117,7 +158,7 @@ class Predictor:
             detections = sv.Detections.from_yolov8(result)
             
             labels = [
-                f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
+                f"{self.predictor_model.model.names[class_id]}-{confidence:0.2f}"
                 for _, confidence, class_id, _
                 in detections
             ]
@@ -128,24 +169,59 @@ class Predictor:
                 in detections
             ]
             
+            for i, label in enumerate(single_labels):
+                single_labels[i] = label + f'_{i}'
+            
             data : dict = {
                 'detected_labels' : single_labels,
             } 
             
+            object_metadata : list = []
+            
             for i, box in enumerate(detections.xyxy.tolist()):
                 xmin, ymin, xmax, ymax = box
                 bbox : dict = {
-                    'xmin' : xmin,
-                    'ymin' : ymin,
-                    'xmax' : xmax,
-                    'ymax' : ymax
+                    'xmin' : round(xmin, 1),
+                    'ymin' : round(ymin, 1),
+                    'xmax' : round(xmax, 1),
+                    'ymax' : round(ymax, 1)
                 } 
                 
-                data[f'box_for_{single_labels[i]}_id_{i}'] = bbox
+                confidence : int = labels[i].split('-')[1]
+                
+                object_data : dict = {
+                    'object_name' : single_labels[i],
+                    'confidence' : confidence,
+                    'bbox' : bbox
+                }
+                
+                object_metadata.append(object_data)
+
+            data[f'metadata'] = object_metadata                
+                
                 
             data_json : object = json.dumps(data)
             
+            if self.show:
+                
+                frame = box_annotator.annotate(
+                    scene=frame, 
+                    detections=detections, 
+                    labels=labels
+                ) 
+                cv2.imshow("yolov8", frame)
+
+                if (cv2.waitKey(30) == 27): 
+                   break
+            
             self.publish(data_json)
 
+        if self.show:
+            cap.release()
+            cv2.destroyAllWindows()
         
-        
+"""
+if __name__ == '__main__':
+    pred = Predictor(model_name='yolov5su.pt')
+    pred.keep_prediction()
+"""

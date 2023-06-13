@@ -1,7 +1,8 @@
 #!/bin/bash
 
-apt-get install python3 python3-pip
-apt-get install -y libgl1-mesa-dev
+sudo apt-get install -y python3 python3-pip
+sudo apt-get install -y libgl1-mesa-dev
+sudo apt-get install python3.11-venv
 
 mkdir /etc/darkflow_weed
 
@@ -15,5 +16,7 @@ cd /etc/darkflow_weed
 
 echo "INSTALANDO DEPENDENCIAS"
 
-pip3 install -r requirements.txt
+pip3 install --break-system-packages --upgrade pip setuptools wheel 
+pip3 install git+https://github.com/opencv/opencv-python
+pip3 install -r --break-system-packages requirements.txt 
 
