@@ -1,0 +1,14 @@
+{
+    "model_name" : "yolov8n.pt",
+ 
+    "mqtt_host" : "test.mosquitto.org",
+    "mqtt_topic" : "darkflowtest",
+    "mqtt_port" : 1883,
+    "tcp_port" : 25400,
+
+    "training_scheme" : "yolov5n.pt",
+    "training_name" : "SomeName",
+    "image_size" : 720,
+    "epochs" : 10,
+    "batch" : 8
+}

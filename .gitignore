@@ -8,9 +8,11 @@ runs
 .runs
 .vscode/settings.json
 media/Tex/d9294a8d6b301b15.log
-.datasets/*
-datasets/*
+.datasets/hojas
+datasets/hojas
 *.pt
 *.pyc
 *.pyc
 *.pyc
+*.pyc
+**/__pycache__/
