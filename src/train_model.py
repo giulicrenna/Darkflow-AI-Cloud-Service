@@ -1,18 +1,31 @@
 from ultralytics import YOLO
 from config import get_config
+
+import shutil
 import os
 
 config: dict = get_config()
+
 DIR_PATH : str = os.path.join(os.getcwd(), 'datasets')
+MODEL_PATH : str = os.path.join(os.getcwd(), 'model')
  
 def train_model(yaml_path: str,
                 training_name : str,
-                model : str = 'yolov8m.pt',
+                model_name : str = 'yolov8m.pt',
                 imgsz : int = 640,
                 epochs : int = 10,
                 batchsz : int = 8) -> None: 
-    model = YOLO(model)
     
+    model_path : str = os.path.join(MODEL_PATH, model_name)
+    
+    try:
+        model = YOLO(model_path)
+    except FileNotFoundError:
+        print('Model was not found on that directory.')
+        os.chdir(MODEL_PATH)
+        model = YOLO(model_name)
+        print('RE-run this script.')
+        
     # yaml_path debe ser la ruta a partir de ./datasets/{df_name}/{data.yaml}
     YAML_PATH : str = os.path.join(DIR_PATH, yaml_path)
     

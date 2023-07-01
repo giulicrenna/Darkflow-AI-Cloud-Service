@@ -10,6 +10,14 @@ Ubuntu services for continuous object detection with YOLOv8 models and openCV
 - python3-pip
 - libgl1-mesa-dev
 
+## Available Models
+---
+yolovXn.pt
+yolovXs.pt
+yolovXm.pt
+yolovXl.pt
+yolovXx.pt
+
 ## Examples
 ---
 
