@@ -15,4 +15,4 @@ datasets/hojas
 *.pyc
 *.pyc
 *.pyc
-**/__pycache__/
+**/__pycache__/ 
