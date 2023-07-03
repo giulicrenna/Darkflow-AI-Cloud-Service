@@ -16,3 +16,4 @@ datasets/hojas
 *.pyc
 *.pyc
 **/__pycache__/ 
+*.png

@@ -1,5 +1,5 @@
 {
-    "model_name" : "yolov8n.pt",
+    "model_name" : "yolov8x.pt",
  
     "mqtt_host" : "test.mosquitto.org",
     "mqtt_topic" : "darkflowtest",

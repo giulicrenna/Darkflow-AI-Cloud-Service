@@ -11,7 +11,7 @@ import paho.mqtt.client as mqtt
 
 
 ABS_PATH : str = os.getcwd()
-
+SAVE_PATH : str = 'predictions/'
 class Predictor:
     def __init__(self,
                  camera_port : int = 0,
@@ -21,28 +21,34 @@ class Predictor:
                  mqtt_port : int = 1883,
                  tcp_port : int = 25400,
                  show : bool = False,
+                 save_predictions : bool = True,
+                 save_with_bbox  : bool = False,
                  use_mqtt : bool = False,
                  use_tcp :bool = False) -> None:
         
-        self.camera_port = camera_port
-        self.model_name = model_name
-        self.mqtt_address = mqtt_address
-        self.mqtt_topic = mqtt_topic
-        self.mqtt_port = mqtt_port
-        self.tcp_port = tcp_port
-        self.show = show
-        self.use_mqtt = use_mqtt
-        self.use_tcp = use_tcp
+        self.camera_port : int = camera_port
+        self.model_name : str = model_name
+        self.mqtt_address : str = mqtt_address
+        self.mqtt_topic : str = mqtt_topic
+        self.mqtt_port : int = mqtt_port
+        self.tcp_port : int = tcp_port
+        self.show : bool = show
+        self.save_predictions : bool = save_predictions
+        self.save_with_bbox = save_with_bbox
+        self.use_mqtt : bool = use_mqtt
+        self.use_tcp : bool = use_tcp
         
         self.flag = True
         
         print(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
             \n\t-mqtt_address:{mqtt_address}\n\t-mqtt_topic:{mqtt_topic}\n\t-mqtt_port:{mqtt_port}\n\t-tcp_port:{tcp_port}\n')
         
+        os.makedirs(SAVE_PATH) if not os.path.exists(SAVE_PATH) else ...
+        
         if self.use_mqtt:
             self.mqtt_client : object = self.setup_mqtt()
         if self.use_tcp:
-            self.tcp_client : objet = self.setup_tcp_socket() 
+            self.tcp_client : object = self.setup_tcp_socket() 
         
         self.predictor_model : object = self.load_model()
         
@@ -122,10 +128,27 @@ class Predictor:
             
             data[f'box_for_{single_labels[i]}_id_{i}'] = bbox
             
-        data_json : object = json.dumps(data)
+        data_json : str = json.dumps(data)
         
-        if self.use_mqtt:
-            self.p681162425ublish(data_json)
+        if self.save_predictions:
+            if self.save_with_bbox:           
+                box_annotator = sv.BoxAnnotator(
+                                    thickness=2,
+                                    text_thickness=2,
+                                    text_scale=1
+                                )
+                
+                frame = box_annotator.annotate(
+                    scene=frame, 
+                    detections=detections, 
+                    labels=labels
+                ) 
+                
+            #cv2.imshow("yolov8", frame) if self.show else ...
+        
+            cv2.imwrite(os.path.join(SAVE_PATH, f'{data_json}.png'), frame) if self.save_predictions else ...
+        
+        self.publish(data_json) if self.use_mqtt else ...
             
         return data
     
@@ -192,20 +215,29 @@ class Predictor:
                     
                 data_json : object = json.dumps(data)
                 
-                if self.show:
-                    frame = box_annotator.annotate(
-                        scene=frame, 
-                        detections=detections, 
-                        labels=labels
-                    ) 
-                    cv2.imshow("yolov8", frame)
-
-                    if (cv2.waitKey(30) == 27): 
-                        break
+                 
+            if self.show or self.save_predictions:
+                box_annotator = sv.BoxAnnotator(
+                                    thickness=2,
+                                    text_thickness=2,
+                                    text_scale=1
+                                )
                 
-                if self.use_mqtt:
-                    self.publish(data_json)
+                frame = box_annotator.annotate(
+                    scene=frame, 
+                    detections=detections, 
+                    labels=labels
+                ) 
+                    
+                cv2.imwrite(SAVE_PATH, frame) if self.save_predictions else ...
+                
+                cv2.imshow("yolov8", frame) if self.show else ...
 
+                self.publish(data_json) if self.use_mqtt else ...
+
+                if (cv2.waitKey(30) == 27): 
+                    break
+                
         if self.show:
             cap.release()
             cv2.destroyAllWindows()
