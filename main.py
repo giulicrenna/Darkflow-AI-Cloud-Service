@@ -8,7 +8,6 @@ if __name__ == '__main__':
         my_model = Predictor(model_name=config['model_name'],
                                 mqtt_address=config['mqtt_host'],
                                 use_mqtt=False,
-                                save_with_bbox=True,
                                 show=True)
         pred = my_model.single_prediction()
         
@@ -17,6 +16,6 @@ if __name__ == '__main__':
     except Exception as e:
         if e == KeyboardInterrupt:
             ...
-        pass
+        print(f'Exception: {e}')
     
     

@@ -3,6 +3,8 @@ from ultralytics import YOLO
 import os
 import socket
 import json
+import time
+import calendar
 
 import supervision as sv
 import cv2
@@ -12,6 +14,7 @@ import paho.mqtt.client as mqtt
 
 ABS_PATH : str = os.getcwd()
 SAVE_PATH : str = 'predictions/'
+
 class Predictor:
     def __init__(self,
                  camera_port : int = 0,
@@ -22,7 +25,8 @@ class Predictor:
                  tcp_port : int = 25400,
                  show : bool = False,
                  save_predictions : bool = True,
-                 save_with_bbox  : bool = False,
+                 save_with_bbox  : bool = True,
+                 save_both : bool = True,
                  use_mqtt : bool = False,
                  use_tcp :bool = False) -> None:
         
@@ -34,7 +38,8 @@ class Predictor:
         self.tcp_port : int = tcp_port
         self.show : bool = show
         self.save_predictions : bool = save_predictions
-        self.save_with_bbox = save_with_bbox
+        self.save_with_bbox : bool = save_with_bbox
+        self.save_both : bool = save_both
         self.use_mqtt : bool = use_mqtt
         self.use_tcp : bool = use_tcp
         
@@ -51,7 +56,6 @@ class Predictor:
             self.tcp_client : object = self.setup_tcp_socket() 
         
         self.predictor_model : object = self.load_model()
-        
         
     def load_model(self) -> object:
         try:
@@ -113,41 +117,65 @@ class Predictor:
             in detections
         ]
         
+        # print(f'{len(single_labels)} - {len(detections.xyxy.tolist())}')
         data : dict = {
-            'detected_labels' : single_labels,
+            'timestamp' : calendar.timegm(time.gmtime()),
+            'detected_labels' : single_labels
         } 
         
-        for i, box in enumerate(detections.xyxy.tolist()):
-            xmin, ymin, xmax, ymax = box
-            bbox : dict = {
-                'xmin' : xmin,
-                'ymin' : ymin,
-                'xmax' : xmax,
-                'ymax' : ymax
-            } 
-            
-            data[f'box_for_{single_labels[i]}_id_{i}'] = bbox
-            
-        data_json : str = json.dumps(data)
+        object_metadata : list = []
         
+        for i, box in enumerate(detections.xyxy.tolist()):
+                xmin, ymin, xmax, ymax = box
+                bbox : dict = {
+                    'xmin' : round(xmin, 1),
+                    'ymin' : round(ymin, 1),
+                    'xmax' : round(xmax, 1),
+                    'ymax' : round(ymax, 1)
+                } 
+                
+                confidence : int = labels[i].split(' ')[1]
+                
+                object_data : dict = {
+                    'object_name' : single_labels[i],
+                    'confidence' : confidence,
+                    'bbox' : bbox
+                }
+                
+                object_metadata.append(object_data)
+
+                data[f'metadata'] = object_metadata                
+                    
+        data_json : str = json.dumps(data, indent=2)
+        FILENAME: str = str(data['timestamp'])
+                        
         if self.save_predictions:
-            if self.save_with_bbox:           
+            if self.save_both:
+                FILENAME_ = FILENAME + '_nbbox'
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
+                
+            if self.save_with_bbox:
+                FILENAME_ = FILENAME + '_bbox'
                 box_annotator = sv.BoxAnnotator(
-                                    thickness=2,
-                                    text_thickness=2,
+                                    thickness=1,
+                                    text_thickness=1,
                                     text_scale=1
                                 )
-                
-                frame = box_annotator.annotate(
+
+                frame_ = box_annotator.annotate(
                     scene=frame, 
                     detections=detections, 
                     labels=labels
-                ) 
+                )
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame_)
                 
-            #cv2.imshow("yolov8", frame) if self.show else ...
-        
-            cv2.imwrite(os.path.join(SAVE_PATH, f'{data_json}.png'), frame) if self.save_predictions else ...
-        
+            else:
+                FILENAME_ = FILENAME + '_nbbox'
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
+                
+            with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:
+                file.write(data_json)
+            
         self.publish(data_json) if self.use_mqtt else ...
             
         return data
@@ -171,7 +199,7 @@ class Predictor:
             detections = sv.Detections.from_yolov8(result)
             
             labels = [
-                f"{self.predictor_model.model.names[class_id]}-{confidence:0.2f}"
+                f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
                 for _, confidence, class_id, _
                 in detections
             ]
@@ -186,7 +214,8 @@ class Predictor:
                 single_labels[i] = label + f'_{i}'
             
             data : dict = {
-                'detected_labels' : single_labels,
+                'timestamp' : calendar.timegm(time.gmtime()),
+                'detected_labels' : single_labels
             } 
             
             object_metadata : list = []
@@ -200,7 +229,7 @@ class Predictor:
                     'ymax' : round(ymax, 1)
                 } 
                 
-                confidence : int = labels[i].split('-')[1]
+                confidence : int = labels[i].split(' ')[1]
                 
                 object_data : dict = {
                     'object_name' : single_labels[i],
