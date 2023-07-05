@@ -11,10 +11,15 @@ import cv2
 import numpy as np
 import paho.mqtt.client as mqtt
 
+import io
+import base64
+from imageio.v2 import imread
+from PIL import Image, ImageFile
+
+ImageFile.LOAD_TRUNCATED_IMAGES = False
 
 ABS_PATH : str = os.getcwd()
 SAVE_PATH : str = 'predictions/'
-
 class Predictor:
     def __init__(self,
                  camera_port : int = 0,
@@ -93,6 +98,90 @@ class Predictor:
         
     def send_tcp_message(self, message : str = '\{\}') -> object:
         ...
+    
+    def predict_from_b64(self, b64_image: str) -> str:
+        img = imread(io.BytesIO(base64.b64decode(   b64_image)))
+        
+        frame = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        
+        result = self.predictor_model(frame,
+                            agnostic_nms=True)[0]
+        
+        detections = sv.Detections.from_yolov8(result)
+        
+        labels = [
+            f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
+            for _, confidence, class_id, _
+            in detections
+         ]
+        
+        single_labels : list = [
+            f"{self.predictor_model.model.names[class_id]}"
+            for _, class_id, class_id, _
+            in detections
+        ]
+        
+        data : dict = {
+            'timestamp' : calendar.timegm(time.gmtime()),
+            'detected_labels' : single_labels
+        } 
+        
+        object_metadata : list = []
+        
+        for i, box in enumerate(detections.xyxy.tolist()):
+                xmin, ymin, xmax, ymax = box
+                bbox : dict = {
+                    'xmin' : round(xmin, 1),
+                    'ymin' : round(ymin, 1),
+                    'xmax' : round(xmax, 1),
+                    'ymax' : round(ymax, 1)
+                } 
+                
+                confidence : int = labels[i].split(' ')[1]
+                
+                object_data : dict = {
+                    'object_name' : single_labels[i],
+                    'confidence' : confidence,
+                    'bbox' : bbox
+                }
+                
+                object_metadata.append(object_data)
+
+                data[f'metadata'] = object_metadata                
+                    
+        data_json : str = json.dumps(data, indent=2)
+        FILENAME: str = str(data['timestamp'])
+                        
+        if self.save_predictions:
+            if self.save_both:
+                FILENAME_ = FILENAME + '_nbbox'
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
+                
+            if self.save_with_bbox:
+                FILENAME_ = FILENAME + '_bbox'
+                box_annotator = sv.BoxAnnotator(
+                                    thickness=1,
+                                    text_thickness=1,
+                                    text_scale=1
+                                )
+
+                frame_ = box_annotator.annotate(
+                    scene=frame, 
+                    detections=detections, 
+                    labels=labels
+                )
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame_)
+                
+            else:
+                FILENAME_ = FILENAME + '_nbbox'
+                cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
+                
+            with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:
+                file.write(data_json)
+            
+        self.publish(data_json) if self.use_mqtt else ...
+            
+        return data
     
     def single_prediction(self) -> dict:
         cap = cv2.VideoCapture(self.camera_port)

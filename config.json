@@ -10,5 +10,7 @@
     "training_name" : "SomeName",
     "image_size" : 720,
     "epochs" : 10,
-    "batch" : 8
+    "batch" : 8,
+
+    "api_port" : 5555
 }
