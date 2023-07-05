@@ -2,6 +2,7 @@ from src.predictor import Predictor
 from src.b64_encoder import export_b64
 from src.config import get_config
 from src.logger import log
+from src.compressor import *
 
 from fastapi import FastAPI
 import uvicorn
@@ -25,7 +26,10 @@ async def root() -> None:
 async def simple_detection(img_data : str):     
     pred : str = ''
     try:   
-        pred = my_model.predict_from_b64(str(img_data))    
+        img_data = decompress(img_data)
+        
+        pred = my_model.predict_from_b64(img_data)    
+        
     except Exception as error:
         return {'exception': f'{error}'}
     
