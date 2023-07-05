@@ -32,7 +32,10 @@ async def simple_detection(img_data : str):
     return pred
 
 if __name__ == "__main__":
-    config = uvicorn.Config("api:run", port=config['api_port'], log_level="info")
+    config = uvicorn.Config("api:run",
+                            host=config['api_host'],
+                            port=config['api_port'],
+                            log_level="info")
     server = uvicorn.Server(config)
     server.run()
 
