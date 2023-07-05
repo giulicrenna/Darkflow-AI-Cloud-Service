@@ -25,9 +25,7 @@ async def root() -> None:
 @run.get("/simple_detection")
 async def simple_detection(img_data : str):     
     pred : str = ''
-    try:   
-        img_data = decompress(img_data)
-        
+    try:           
         pred = my_model.predict_from_b64(img_data)    
         
     except Exception as error:
