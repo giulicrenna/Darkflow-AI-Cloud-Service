@@ -18,3 +18,4 @@ datasets/hojas
 **/__pycache__/ 
 *.png
 *.json
+firebase_key.json
