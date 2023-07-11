@@ -12,11 +12,11 @@ Ubuntu services for continuous object detection with YOLOv8 models and openCV
 
 ## Available Models
 ---
-yolovXn.pt
-yolovXs.pt
-yolovXm.pt
-yolovXl.pt
-yolovXx.pt
+- yolovXn.pt
+- yolovXs.pt
+- yolovXm.pt
+- yolovXl.pt
+- yolovXx.pt
 
 ## Examples
 ---

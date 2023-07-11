@@ -19,7 +19,7 @@ from PIL import Image, ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = False
 
 ABS_PATH : str = os.getcwd()
-SAVE_PATH : str = 'predictions/'
+SAVE_PATH : str = 'detections/'
 class Predictor:
     def __init__(self,
                  camera_port : int = 0,
