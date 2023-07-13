@@ -19,3 +19,4 @@ datasets/hojas
 *.png
 *.json
 firebase_key.json
+*.jpeg

@@ -11,13 +11,15 @@ if __name__ == '__main__':
         my_model = Predictor(model_name=config['model_name'],
                                 mqtt_address=config['mqtt_host'],
                                 use_mqtt=False,
-                                show=True)
+                                show=True,
+                                save_both=False,
+                                save_predictions=True)
         firebase_conn = FirestoreConnector()
         files: list  = firebase_conn.update_files_list()
         
         print('AVAILABLE FILES: ')
         for file in files:
-            print(f'\t- {file[0]}->{file[1]}')
+            print(f'\t- {file}')
         
         firebase_conn.download_images_stack()
 
@@ -28,6 +30,8 @@ if __name__ == '__main__':
 
                 print(pred)
         
+        print('Uploading Files')
+        firebase_conn.upload_image_stack()
     except Exception as e:
         if e == KeyboardInterrupt:
             ...

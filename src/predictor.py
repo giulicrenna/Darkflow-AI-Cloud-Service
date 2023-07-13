@@ -10,6 +10,7 @@ import supervision as sv
 import cv2
 import numpy as np
 import paho.mqtt.client as mqtt
+import uuid
 
 import io
 import base64
@@ -150,7 +151,7 @@ class Predictor:
                 data[f'metadata'] = object_metadata                
                     
         data_json : str = json.dumps(data, indent=2)
-        FILENAME: str = str(data['timestamp'])
+        FILENAME: str = str(uuid.uuid4())
                         
         if self.save_predictions:
             if self.save_both:
@@ -176,8 +177,8 @@ class Predictor:
                 FILENAME_ = FILENAME + '_nbbox'
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
                 
-            with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:
-                file.write(data_json)
+            #with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:
+                #file.write(data_json)
             
         self.publish(data_json) if self.use_mqtt else ...
             
