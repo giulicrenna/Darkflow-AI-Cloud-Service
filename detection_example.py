@@ -1,6 +1,5 @@
 from src.predictor import Predictor
 from src.config import get_config
-from src.firebase import FirestoreConnector
 import os
 import base64
 
@@ -8,20 +7,13 @@ config: dict = get_config()
 
 if __name__ == '__main__':
     try:
-        my_model = Predictor(model_name=config['model_name'],
+        my_model = Predictor(model_name='best.pt',#config['model_name'],
                                 mqtt_address=config['mqtt_host'],
                                 use_mqtt=False,
                                 show=True,
                                 save_both=False,
                                 save_predictions=True)
-        firebase_conn = FirestoreConnector()
-        files: list  = firebase_conn.update_files_list()
         
-        print('AVAILABLE FILES: ')
-        for file in files:
-            print(f'\t- {file}')
-        
-        firebase_conn.download_images_stack()
 
         for file in os.listdir('downloads/'):
             with open(os.path.join('downloads', file), 'rb') as image:
@@ -30,8 +22,6 @@ if __name__ == '__main__':
 
                 print(pred)
         
-        print('Uploading Files')
-        firebase_conn.upload_image_stack()
     except Exception as e:
         if e == KeyboardInterrupt:
             ...

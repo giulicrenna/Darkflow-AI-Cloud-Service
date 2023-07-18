@@ -161,9 +161,9 @@ class Predictor:
             if self.save_with_bbox:
                 FILENAME_ = FILENAME + '_bbox'
                 box_annotator = sv.BoxAnnotator(
-                                    thickness=1,
+                                    thickness=4,
                                     text_thickness=1,
-                                    text_scale=1
+                                    text_scale=2
                                 )
 
                 frame_ = box_annotator.annotate(

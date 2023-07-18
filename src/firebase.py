@@ -67,7 +67,8 @@ class FirestoreConnector():
         temp_files: list = []
         
         for blob in blobs:
-            temp_files.append(blob.name)
+            if not str(blob.name).endswith('/'):
+                temp_files.append(blob.name)
         
         self.files_list = temp_files
         
@@ -82,7 +83,8 @@ class FirestoreConnector():
         temp_files: list = []
         
         for blob in blobs:
-            temp_files.append(blob.name)
+            if not str(blob.name).endswith('/'):
+                temp_files.append(blob.name)
         
         return temp_files
     
