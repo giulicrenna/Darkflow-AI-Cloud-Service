@@ -92,6 +92,8 @@ class FirestoreConnector():
         if len(self.files_list) <= 0:
             print('No files in memory.\n¿Have you runned FirestoreConnector.files_list()?')
             return
+        if not os.path.isdir(self.download_path):
+            os.mkdir(self.download_path)
         
         current_downloaded: list = os.listdir(self.download_path)
         
@@ -102,6 +104,7 @@ class FirestoreConnector():
 
             if not filename in current_downloaded:
                 blob = bucket.blob(file)
+                print(f'Downloading: {filename} ')
                 blob.download_to_filename(os.path.join(self.download_path, filename))
 
     def upload_image_stack(self,

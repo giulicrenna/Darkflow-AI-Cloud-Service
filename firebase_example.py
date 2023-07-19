@@ -24,7 +24,7 @@ if __name__ == '__main__':
             print(f'\t- {file}')
         
         firebase_conn.download_images_stack()
-
+        """
         for file in os.listdir('downloads/'):
             with open(os.path.join('downloads', file), 'rb') as image:
                 encoded_str: str = base64.b64encode(image.read())    
@@ -34,6 +34,7 @@ if __name__ == '__main__':
         
         print('Uploading Files')
         firebase_conn.upload_image_stack()
+        """
 
     except Exception as e:
         if e == KeyboardInterrupt:
