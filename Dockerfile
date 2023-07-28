@@ -1,14 +1,19 @@
-FROM python:3.8-slim-buster
+FROM debian
 
-COPY src .
-COPY model .
-COPY test_img .
-COPY requirements.txt .
-
+RUN apt-get update && apt-get install -y bash
+RUN apt-get install wget -y
+RUN apt-get install imagemagick -y
+RUN apt-get install zip -y
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+RUN aptget install python3.11 -y
+
+COPY src /service/src
+COPY model /service/model
+COPY requirements.txt /service/requirements.txt
+COPY main.py /service/main.py
+
+WORKDIR /service
 
 RUN pip install -r requirements.txt
 
-EXPOSE 23444
-
-RUN python3 src/predict_from_cam.py
+RUN python3.11 main.py

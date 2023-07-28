@@ -20,3 +20,4 @@ datasets/hojas
 *.json
 firebase_key.json
 *.jpeg
+*.JPG

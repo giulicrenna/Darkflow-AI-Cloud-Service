@@ -1,9 +1,10 @@
 import os
-import uuid
+import time
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
-
+from firebase_admin import db
+from src.logger import log
 
 KEY_PATH: str = os.path.join(
     os.getcwd(),
@@ -24,6 +25,8 @@ BUCKET: str = 'cda-darkflow.appspot.com'
 
 DATABASE: str = 'https://cda-darkflow-default-rtdb.firebaseio.com/'
 
+cred = credentials.Certificate(KEY_PATH)
+
 firebaseConfig : dict = {
   'apiKey': "AIzaSyDjPV6kw5YJoAcmU0fxAe7G_7oEr49ite4",
   'authDomain': "cda-darkflow.firebaseapp.com",
@@ -36,6 +39,28 @@ firebaseConfig : dict = {
   "serviceAccount" : f"{KEY_PATH}",
   'database' : f'{DATABASE}'
 }
+
+class FirestoreRealTimeDatabase():
+    def __init__(self,
+                 databaseURL: str = 'https://cda-darkflow-detections-metadata.firebaseio.com/',
+                 reference: str = 'detections') -> None:
+        self.database: dict =  {'databaseURL': databaseURL}
+        self.reference = reference
+        self.app_name = 'RealtimeDatabaseConnector'
+        
+        self.RTD = firebase_admin.initialize_app(cred, self.database, self.app_name)
+        log('Firestore realtime database initialized.')
+        
+    def appendData(self, dataJSON: dict, dataReference: str) -> None:
+        reference = db.reference(f'{self.reference}/{dataReference}', self.RTD)
+        reference.set(dataJSON)
+        
+    def register_exists(self, dataReference: str) -> bool:
+        reference = db.reference(f'{self.reference}/{dataReference}', self.RTD)
+        snapshot = reference.get()
+        
+        return True if snapshot != None else False
+        
 
 class FirestoreConnector():
     def __init__(self,
@@ -51,12 +76,12 @@ class FirestoreConnector():
         self.download_path = download_path
         self.bucket_name = bucket_name
         
-        cred = credentials.Certificate(KEY_PATH)
         firebase_admin.initialize_app(cred, {
             'storageBucket': self.bucket_name
             })
         
-
+        log('Firestore storage initialized.')
+        
         self.files_list: list = []
         
     def update_files_list(self,
@@ -98,24 +123,36 @@ class FirestoreConnector():
         bucket = storage.bucket()
         
         for file in self.files_list:
-            filename: str = str(file).split('/')[1] + ".jpeg"
+            filename: str = str(file).split('/')[1]
 
             if not filename in current_downloaded:
                 blob = bucket.blob(file)
+                log(f'Downloading: {file}')
                 blob.download_to_filename(os.path.join(self.download_path, filename))
 
     def upload_image_stack(self,
                            final_detections_path: str = FINAL_DETECTIONS_PATH,
                            source_path: str = None) -> None:
+        start: int = time.time()
         if source_path == None:
             source_path = self.detection_path
         
         for file in os.listdir(final_detections_path):
             cloud_path: str = os.path.join(source_path + file)
             local_path: str = os.path.join(final_detections_path, file)
+            
             bucket = storage.bucket()
             blob = bucket.blob(cloud_path)
-            blob.upload_from_filename(local_path)
             
+            try:
+                filename: str = file.split('.')[0]
+                log(f'Uploading {filename}.')
+                blob.upload_from_filename(local_path)
+            except Exception as e:
+                msg: str = f'Exception {e}'
+                log(msg)
+                print(msg)
+        
+        log(f'Files uploaded in {time.time() - start}')
                 
 
