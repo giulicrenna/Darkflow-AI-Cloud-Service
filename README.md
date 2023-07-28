@@ -1,7 +1,17 @@
 # Darkflow-Weed-AI
 ---
     
-Ubuntu services for continuous object detection with YOLOv8 models and openCV
+Services for continuous object detection with YOLOv8 models and openCV
+
+## **Modo de uso**
+To deploy the create the docker image, run the following command inside the folder where is the dockerfile.
+```
+sudo docker build -t <name> .
+```
+To run the container image:
+```
+sudo docker run -it -v <name>
+```
 
 ## Dependencies
 ---
