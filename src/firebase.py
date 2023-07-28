@@ -99,7 +99,7 @@ class FirestoreConnector():
         
         return self.files_list
     
-    def files_list(self,
+    def files_listing(self,
                    path: str = PATH_CLOUD_TRAIN) -> list:
         
         bucket = storage.bucket()
@@ -114,6 +114,10 @@ class FirestoreConnector():
         return temp_files
     
     def download_images_stack(self) -> None:
+        start = time.time()
+        if not os.path.isdir(self.download_path):
+            os.mkdir(self.download_path)
+            
         if len(self.files_list) <= 0:
             print('No files in memory.\n¿Have you runned FirestoreConnector.files_list()?')
             return
@@ -129,30 +133,36 @@ class FirestoreConnector():
                 blob = bucket.blob(file)
                 log(f'Downloading: {file}')
                 blob.download_to_filename(os.path.join(self.download_path, filename))
-
+        log(f'Files downloaded in {time.time() - start}')
+    
     def upload_image_stack(self,
                            final_detections_path: str = FINAL_DETECTIONS_PATH,
                            source_path: str = None) -> None:
         start: int = time.time()
+        
         if source_path == None:
             source_path = self.detection_path
         
-        for file in os.listdir(final_detections_path):
-            cloud_path: str = os.path.join(source_path + file)
-            local_path: str = os.path.join(final_detections_path, file)
-            
-            bucket = storage.bucket()
-            blob = bucket.blob(cloud_path)
-            
-            try:
-                filename: str = file.split('.')[0]
-                log(f'Uploading {filename}.')
-                blob.upload_from_filename(local_path)
-            except Exception as e:
-                msg: str = f'Exception {e}'
-                log(msg)
-                print(msg)
+        uploaded_files: list = self.files_listing(source_path)
+        uploaded_files = [str(x).split('/')[1] for x in uploaded_files]
         
+        for file in os.listdir(final_detections_path):
+            if not file in uploaded_files:
+                cloud_path: str = os.path.join(source_path + file)
+                local_path: str = os.path.join(final_detections_path, file)
+                
+                bucket = storage.bucket()
+                blob = bucket.blob(cloud_path)
+                
+                try:
+                    filename: str = file.split('.')[0]
+                    log(f'Uploading {filename}.')
+                    blob.upload_from_filename(local_path)
+                except Exception as e:
+                    msg: str = f'Exception {e}'
+                    log(msg)
+                    print(msg)
+            
         log(f'Files uploaded in {time.time() - start}')
                 
 

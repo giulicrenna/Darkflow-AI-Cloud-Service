@@ -280,3 +280,414 @@
 20:58/27-7-2023 -> Uploading DJI_0972_bbox.
 20:58/27-7-2023 -> Uploading DJI_0973_bbox.
 20:58/27-7-2023 -> Files uploaded in 241.73353672027588
+0:45/28-7-2023 -> Initializing main.py.
+0:45/28-7-2023 -> Firestore realtime database initialized.
+0:45/28-7-2023 -> Firestore storage initialized.
+0:45/28-7-2023 -> Initializing predictor.py.
+0:45/28-7-2023 -> Loading model best.pt
+0:45/28-7-2023 -> Downloading images.
+0:45/28-7-2023 -> Downloading: drone/descarga.jpg
+0:45/28-7-2023 -> Uploading descarga_bbox.
+0:45/28-7-2023 -> Uploading DJI_0885_bbox.
+0:45/28-7-2023 -> Uploading DJI_0886_bbox.
+0:45/28-7-2023 -> Uploading DJI_0887_bbox.
+0:46/28-7-2023 -> Uploading DJI_0888_bbox.
+0:46/28-7-2023 -> Uploading DJI_0889_bbox.
+0:46/28-7-2023 -> Uploading DJI_0890_bbox.
+0:46/28-7-2023 -> Uploading DJI_0891_bbox.
+0:46/28-7-2023 -> Uploading DJI_0892_bbox.
+0:46/28-7-2023 -> Uploading DJI_0893_bbox.
+0:46/28-7-2023 -> Uploading DJI_0894_bbox.
+0:46/28-7-2023 -> Uploading DJI_0895_bbox.
+0:46/28-7-2023 -> Uploading DJI_0896_bbox.
+0:46/28-7-2023 -> Uploading DJI_0897_bbox.
+0:46/28-7-2023 -> Uploading DJI_0898_bbox.
+0:46/28-7-2023 -> Uploading DJI_0899_bbox.
+0:46/28-7-2023 -> Uploading DJI_0900_bbox.
+0:46/28-7-2023 -> Uploading DJI_0901_bbox.
+0:46/28-7-2023 -> Uploading DJI_0902_bbox.
+0:46/28-7-2023 -> Uploading DJI_0903_bbox.
+0:46/28-7-2023 -> Uploading DJI_0904_bbox.
+0:46/28-7-2023 -> Uploading DJI_0905_bbox.
+0:47/28-7-2023 -> Uploading DJI_0906_bbox.
+0:47/28-7-2023 -> Uploading DJI_0907_bbox.
+0:47/28-7-2023 -> Uploading DJI_0908_bbox.
+0:47/28-7-2023 -> Uploading DJI_0909_bbox.
+0:47/28-7-2023 -> Uploading DJI_0910_bbox.
+0:47/28-7-2023 -> Uploading DJI_0911_bbox.
+0:47/28-7-2023 -> Uploading DJI_0912_bbox.
+0:47/28-7-2023 -> Uploading DJI_0913_bbox.
+0:47/28-7-2023 -> Uploading DJI_0914_bbox.
+0:47/28-7-2023 -> Uploading DJI_0915_bbox.
+0:47/28-7-2023 -> Uploading DJI_0916_bbox.
+0:47/28-7-2023 -> Uploading DJI_0917_bbox.
+0:47/28-7-2023 -> Uploading DJI_0918_bbox.
+0:47/28-7-2023 -> Uploading DJI_0919_bbox.
+0:47/28-7-2023 -> Uploading DJI_0920_bbox.
+0:47/28-7-2023 -> Uploading DJI_0921_bbox.
+0:47/28-7-2023 -> Uploading DJI_0922_bbox.
+0:48/28-7-2023 -> Uploading DJI_0923_bbox.
+0:48/28-7-2023 -> Uploading DJI_0924_bbox.
+0:48/28-7-2023 -> Uploading DJI_0925_bbox.
+0:48/28-7-2023 -> Uploading DJI_0926_bbox.
+0:48/28-7-2023 -> Uploading DJI_0927_bbox.
+0:48/28-7-2023 -> Uploading DJI_0928_bbox.
+0:48/28-7-2023 -> Uploading DJI_0929_bbox.
+0:48/28-7-2023 -> Uploading DJI_0930_bbox.
+0:48/28-7-2023 -> Uploading DJI_0931_bbox.
+0:48/28-7-2023 -> Uploading DJI_0932_bbox.
+0:48/28-7-2023 -> Uploading DJI_0933_bbox.
+0:48/28-7-2023 -> Uploading DJI_0934_bbox.
+0:48/28-7-2023 -> Uploading DJI_0935_bbox.
+0:48/28-7-2023 -> Uploading DJI_0936_bbox.
+0:48/28-7-2023 -> Uploading DJI_0937_bbox.
+0:48/28-7-2023 -> Uploading DJI_0938_bbox.
+0:48/28-7-2023 -> Uploading DJI_0939_bbox.
+0:48/28-7-2023 -> Uploading DJI_0940_bbox.
+0:49/28-7-2023 -> Uploading DJI_0941_bbox.
+0:49/28-7-2023 -> Uploading DJI_0942_bbox.
+0:49/28-7-2023 -> Uploading DJI_0952_bbox.
+0:49/28-7-2023 -> Uploading DJI_0953_bbox.
+0:49/28-7-2023 -> Uploading DJI_0954_bbox.
+0:49/28-7-2023 -> Uploading DJI_0955_bbox.
+0:49/28-7-2023 -> Uploading DJI_0956_bbox.
+0:49/28-7-2023 -> Uploading DJI_0957_bbox.
+0:49/28-7-2023 -> Uploading DJI_0958_bbox.
+0:49/28-7-2023 -> Uploading DJI_0959_bbox.
+0:49/28-7-2023 -> Uploading DJI_0960_bbox.
+0:49/28-7-2023 -> Uploading DJI_0961_bbox.
+0:49/28-7-2023 -> Uploading DJI_0962_bbox.
+0:49/28-7-2023 -> Uploading DJI_0963_bbox.
+0:49/28-7-2023 -> Uploading DJI_0964_bbox.
+0:49/28-7-2023 -> Uploading DJI_0965_bbox.
+0:49/28-7-2023 -> Uploading DJI_0966_bbox.
+0:50/28-7-2023 -> Uploading DJI_0967_bbox.
+0:50/28-7-2023 -> Uploading DJI_0968_bbox.
+0:50/28-7-2023 -> Uploading DJI_0971_bbox.
+0:50/28-7-2023 -> Uploading DJI_0972_bbox.
+0:50/28-7-2023 -> Uploading DJI_0973_bbox.
+0:50/28-7-2023 -> Files uploaded in 272.71675515174866
+0:50/28-7-2023 -> Downloading images.
+0:50/28-7-2023 -> Uploading descarga_bbox.
+0:50/28-7-2023 -> Uploading DJI_0885_bbox.
+0:50/28-7-2023 -> Uploading DJI_0886_bbox.
+0:50/28-7-2023 -> Uploading DJI_0887_bbox.
+0:50/28-7-2023 -> Uploading DJI_0888_bbox.
+0:50/28-7-2023 -> Uploading DJI_0889_bbox.
+0:50/28-7-2023 -> Uploading DJI_0890_bbox.
+0:51/28-7-2023 -> Uploading DJI_0891_bbox.
+0:51/28-7-2023 -> Uploading DJI_0892_bbox.
+0:51/28-7-2023 -> Uploading DJI_0893_bbox.
+0:51/28-7-2023 -> Uploading DJI_0894_bbox.
+0:51/28-7-2023 -> Uploading DJI_0895_bbox.
+0:51/28-7-2023 -> Uploading DJI_0896_bbox.
+0:51/28-7-2023 -> Uploading DJI_0897_bbox.
+0:51/28-7-2023 -> Uploading DJI_0898_bbox.
+0:51/28-7-2023 -> Uploading DJI_0899_bbox.
+0:51/28-7-2023 -> Uploading DJI_0900_bbox.
+0:51/28-7-2023 -> Uploading DJI_0901_bbox.
+0:51/28-7-2023 -> Downloading images.
+0:51/28-7-2023 -> Uploading descarga_bbox.
+0:52/28-7-2023 -> Uploading DJI_0885_bbox.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:52/28-7-2023 -> Downloading images.
+0:54/28-7-2023 -> Initializing main.py.
+0:54/28-7-2023 -> Firestore realtime database initialized.
+0:54/28-7-2023 -> Firestore storage initialized.
+0:54/28-7-2023 -> Initializing predictor.py.
+0:54/28-7-2023 -> Loading model best.pt
+0:54/28-7-2023 -> Downloading images.
+0:54/28-7-2023 -> Exception: 'list' object is not callable
+0:56/28-7-2023 -> Initializing main.py.
+0:56/28-7-2023 -> Firestore realtime database initialized.
+0:56/28-7-2023 -> Firestore storage initialized.
+0:56/28-7-2023 -> Initializing predictor.py.
+0:56/28-7-2023 -> Loading model best.pt
+0:56/28-7-2023 -> Downloading images.
+0:57/28-7-2023 -> Exception: 'list' object is not callable
+0:58/28-7-2023 -> Initializing main.py.
+0:58/28-7-2023 -> Firestore realtime database initialized.
+0:58/28-7-2023 -> Firestore storage initialized.
+0:58/28-7-2023 -> Initializing predictor.py.
+0:58/28-7-2023 -> Loading model best.pt
+0:58/28-7-2023 -> Downloading images.
+0:58/28-7-2023 -> Uploading descarga_bbox.
+0:58/28-7-2023 -> Uploading DJI_0885_bbox.
+0:58/28-7-2023 -> Uploading DJI_0886_bbox.
+0:58/28-7-2023 -> Uploading DJI_0887_bbox.
+0:58/28-7-2023 -> Uploading DJI_0888_bbox.
+0:58/28-7-2023 -> Uploading DJI_0889_bbox.
+0:58/28-7-2023 -> Uploading DJI_0890_bbox.
+0:58/28-7-2023 -> Uploading DJI_0891_bbox.
+0:58/28-7-2023 -> Uploading DJI_0892_bbox.
+0:58/28-7-2023 -> Uploading DJI_0893_bbox.
+0:58/28-7-2023 -> Uploading DJI_0894_bbox.
+0:58/28-7-2023 -> Uploading DJI_0895_bbox.
+0:59/28-7-2023 -> Uploading DJI_0896_bbox.
+0:59/28-7-2023 -> Uploading DJI_0897_bbox.
+0:59/28-7-2023 -> Uploading DJI_0898_bbox.
+0:59/28-7-2023 -> Uploading DJI_0899_bbox.
+0:59/28-7-2023 -> Uploading DJI_0900_bbox.
+0:59/28-7-2023 -> Uploading DJI_0901_bbox.
+0:59/28-7-2023 -> Uploading DJI_0902_bbox.
+0:59/28-7-2023 -> Uploading DJI_0903_bbox.
+0:59/28-7-2023 -> Uploading DJI_0904_bbox.
+0:59/28-7-2023 -> Uploading DJI_0905_bbox.
+0:59/28-7-2023 -> Uploading DJI_0906_bbox.
+0:59/28-7-2023 -> Uploading DJI_0907_bbox.
+0:59/28-7-2023 -> Uploading DJI_0908_bbox.
+0:59/28-7-2023 -> Uploading DJI_0909_bbox.
+0:59/28-7-2023 -> Uploading DJI_0910_bbox.
+0:59/28-7-2023 -> Uploading DJI_0911_bbox.
+0:59/28-7-2023 -> Uploading DJI_0912_bbox.
+0:59/28-7-2023 -> Uploading DJI_0913_bbox.
+0:59/28-7-2023 -> Uploading DJI_0914_bbox.
+1:0/28-7-2023 -> Uploading DJI_0915_bbox.
+1:0/28-7-2023 -> Uploading DJI_0916_bbox.
+1:0/28-7-2023 -> Uploading DJI_0917_bbox.
+1:0/28-7-2023 -> Initializing main.py.
+1:0/28-7-2023 -> Firestore realtime database initialized.
+1:0/28-7-2023 -> Firestore storage initialized.
+1:0/28-7-2023 -> Initializing predictor.py.
+1:0/28-7-2023 -> Loading model best.pt
+1:0/28-7-2023 -> Downloading images.
+1:0/28-7-2023 -> Uploading descarga_bbox.
+1:0/28-7-2023 -> Uploading DJI_0885_bbox.
+1:0/28-7-2023 -> Uploading DJI_0886_bbox.
+1:0/28-7-2023 -> Uploading DJI_0887_bbox.
+1:0/28-7-2023 -> Uploading DJI_0888_bbox.
+1:0/28-7-2023 -> Uploading DJI_0889_bbox.
+1:0/28-7-2023 -> Uploading DJI_0890_bbox.
+1:0/28-7-2023 -> Uploading DJI_0891_bbox.
+1:0/28-7-2023 -> Uploading DJI_0892_bbox.
+1:1/28-7-2023 -> Uploading DJI_0893_bbox.
+1:1/28-7-2023 -> Uploading DJI_0894_bbox.
+1:1/28-7-2023 -> Uploading DJI_0895_bbox.
+1:1/28-7-2023 -> Uploading DJI_0896_bbox.
+1:1/28-7-2023 -> Uploading DJI_0897_bbox.
+1:2/28-7-2023 -> Initializing main.py.
+1:2/28-7-2023 -> Firestore realtime database initialized.
+1:2/28-7-2023 -> Firestore storage initialized.
+1:2/28-7-2023 -> Initializing predictor.py.
+1:2/28-7-2023 -> Loading model best.pt
+1:2/28-7-2023 -> Downloading images.
+1:2/28-7-2023 -> Files uploaded in 0.2503514289855957
+1:2/28-7-2023 -> Downloading images.
+1:3/28-7-2023 -> Initializing main.py.
+1:3/28-7-2023 -> Firestore realtime database initialized.
+1:3/28-7-2023 -> Firestore storage initialized.
+1:3/28-7-2023 -> Initializing predictor.py.
+1:3/28-7-2023 -> Loading model best.pt
+1:3/28-7-2023 -> Downloading images.
+1:3/28-7-2023 -> Files downloaded in 0.0
+1:4/28-7-2023 -> Files uploaded in 0.5426709651947021
+1:4/28-7-2023 -> Downloading images.
+1:4/28-7-2023 -> Files downloaded in 0.0
+1:4/28-7-2023 -> Files uploaded in 0.2698936462402344
+1:4/28-7-2023 -> Downloading images.
+1:4/28-7-2023 -> Files downloaded in 0.001008749008178711
+1:4/28-7-2023 -> Files uploaded in 0.47220349311828613
+1:4/28-7-2023 -> Downloading images.
+1:4/28-7-2023 -> Files downloaded in 0.0009999275207519531
+1:5/28-7-2023 -> Files uploaded in 0.3694477081298828
+1:5/28-7-2023 -> Downloading images.
+1:5/28-7-2023 -> Files downloaded in 0.0009992122650146484
+1:5/28-7-2023 -> Files uploaded in 0.3642263412475586
+1:5/28-7-2023 -> Downloading images.
+1:5/28-7-2023 -> Files downloaded in 0.0009980201721191406
+1:5/28-7-2023 -> Files uploaded in 0.3755769729614258
+1:5/28-7-2023 -> Downloading images.
+1:5/28-7-2023 -> Files downloaded in 0.0010097026824951172
+1:5/28-7-2023 -> Files uploaded in 0.3810122013092041
+1:5/28-7-2023 -> Downloading images.
+1:5/28-7-2023 -> Files downloaded in 0.0
+1:6/28-7-2023 -> Files uploaded in 0.37724924087524414
+1:6/28-7-2023 -> Downloading images.
+1:6/28-7-2023 -> Files downloaded in 0.0
+1:6/28-7-2023 -> Files uploaded in 0.3644905090332031
+1:6/28-7-2023 -> Downloading images.
+1:6/28-7-2023 -> Files downloaded in 0.0010018348693847656
+1:6/28-7-2023 -> Files uploaded in 0.38118839263916016
+1:6/28-7-2023 -> Downloading images.
+1:6/28-7-2023 -> Files downloaded in 0.0010001659393310547
+1:7/28-7-2023 -> Files uploaded in 0.381758451461792
+1:7/28-7-2023 -> Downloading images.
+1:7/28-7-2023 -> Files downloaded in 0.001009225845336914
+1:7/28-7-2023 -> Files uploaded in 0.3627500534057617
+1:7/28-7-2023 -> Downloading images.
+1:7/28-7-2023 -> Files downloaded in 0.0
+1:7/28-7-2023 -> Files uploaded in 0.36645030975341797
+1:7/28-7-2023 -> Downloading images.
+1:7/28-7-2023 -> Files downloaded in 0.0005054473876953125
+1:7/28-7-2023 -> Files uploaded in 0.3767890930175781
+1:7/28-7-2023 -> Downloading images.
+1:7/28-7-2023 -> Files downloaded in 0.0
+1:8/28-7-2023 -> Files uploaded in 0.5287482738494873
+1:8/28-7-2023 -> Downloading images.
+1:8/28-7-2023 -> Files downloaded in 0.0015056133270263672
+1:8/28-7-2023 -> Initializing main.py.
+1:8/28-7-2023 -> Firestore realtime database initialized.
+1:8/28-7-2023 -> Firestore storage initialized.
+1:8/28-7-2023 -> Initializing predictor.py.
+1:8/28-7-2023 -> Loading model best.pt
+1:8/28-7-2023 -> Downloading images.
+1:8/28-7-2023 -> Files downloaded in 0.0
+1:8/28-7-2023 -> Files uploaded in 0.3697781562805176
+1:8/28-7-2023 -> Downloading images.
+1:8/28-7-2023 -> Files downloaded in 0.0005087852478027344
+1:9/28-7-2023 -> Files uploaded in 0.24663901329040527
+1:9/28-7-2023 -> Downloading images.
+1:9/28-7-2023 -> Files downloaded in 0.0
+1:9/28-7-2023 -> Files uploaded in 0.23300933837890625
+1:9/28-7-2023 -> Downloading images.
+1:9/28-7-2023 -> Files downloaded in 0.0
+1:9/28-7-2023 -> Files uploaded in 0.2322838306427002
+1:9/28-7-2023 -> Downloading images.
+1:9/28-7-2023 -> Files downloaded in 0.0
+1:10/28-7-2023 -> Files uploaded in 0.2328777313232422
+1:10/28-7-2023 -> Downloading images.
+1:10/28-7-2023 -> Files downloaded in 0.0
+1:10/28-7-2023 -> Files uploaded in 0.2316300868988037
+1:10/28-7-2023 -> Downloading images.
+1:10/28-7-2023 -> Files downloaded in 0.0010001659393310547
+1:10/28-7-2023 -> Files uploaded in 0.22751402854919434
+1:10/28-7-2023 -> Downloading images.
+1:10/28-7-2023 -> Downloading: drone/1.jpg
+1:10/28-7-2023 -> Downloading: drone/2.jpg
+1:10/28-7-2023 -> Downloading: drone/3.jpg
+1:10/28-7-2023 -> Downloading: drone/4.jpg
+1:10/28-7-2023 -> Downloading: drone/5.jpg
+1:10/28-7-2023 -> Files downloaded in 2.569544792175293
+1:11/28-7-2023 -> Uploading 1_bbox.
+1:11/28-7-2023 -> Uploading 2_bbox.
+1:11/28-7-2023 -> Uploading 3_bbox.
+1:11/28-7-2023 -> Uploading 4_bbox.
+1:11/28-7-2023 -> Uploading 5_bbox.
+1:11/28-7-2023 -> Files uploaded in 9.528909683227539
+1:11/28-7-2023 -> Downloading images.
+1:11/28-7-2023 -> Files downloaded in 0.0010001659393310547
+1:11/28-7-2023 -> Files uploaded in 0.37497496604919434
+1:11/28-7-2023 -> Downloading images.
+1:11/28-7-2023 -> Files downloaded in 0.0010006427764892578
+1:11/28-7-2023 -> Files uploaded in 0.40552783012390137
+1:11/28-7-2023 -> Downloading images.
+1:11/28-7-2023 -> Files downloaded in 0.0
+1:12/28-7-2023 -> Files uploaded in 0.3705894947052002
+1:12/28-7-2023 -> Downloading images.
+1:12/28-7-2023 -> Files downloaded in 0.0010077953338623047
+1:12/28-7-2023 -> Files uploaded in 0.3708834648132324
+1:12/28-7-2023 -> Downloading images.
+1:12/28-7-2023 -> Files downloaded in 0.0
+1:12/28-7-2023 -> Files uploaded in 0.3907465934753418
+1:12/28-7-2023 -> Downloading images.
+1:12/28-7-2023 -> Files downloaded in 0.0010008811950683594
+1:13/28-7-2023 -> Files uploaded in 0.3740546703338623
+1:13/28-7-2023 -> Downloading images.
+1:13/28-7-2023 -> Files downloaded in 0.0010094642639160156
+1:13/28-7-2023 -> Files uploaded in 0.36911797523498535
+1:13/28-7-2023 -> Downloading images.
+1:13/28-7-2023 -> Files downloaded in 0.0
+1:13/28-7-2023 -> Files uploaded in 0.3714900016784668
+1:13/28-7-2023 -> Downloading images.
+1:13/28-7-2023 -> Files downloaded in 0.0010018348693847656
+1:14/28-7-2023 -> Files uploaded in 0.46039366722106934
+1:14/28-7-2023 -> Downloading images.
+1:14/28-7-2023 -> Files downloaded in 0.0010006427764892578
+1:14/28-7-2023 -> Files uploaded in 0.37813401222229004
+1:14/28-7-2023 -> Downloading images.
+1:14/28-7-2023 -> Files downloaded in 0.001001596450805664
+1:14/28-7-2023 -> Files uploaded in 0.3757286071777344
+1:14/28-7-2023 -> Downloading images.
+1:14/28-7-2023 -> Files downloaded in 0.0010013580322265625
+1:15/28-7-2023 -> Files uploaded in 0.3737905025482178
+1:15/28-7-2023 -> Downloading images.
+1:15/28-7-2023 -> Files downloaded in 0.001508951187133789
+1:15/28-7-2023 -> Files uploaded in 0.3710758686065674
+1:15/28-7-2023 -> Downloading images.
+1:15/28-7-2023 -> Files downloaded in 0.0
+1:15/28-7-2023 -> Initializing main.py.
+1:15/28-7-2023 -> Firestore realtime database initialized.
+1:15/28-7-2023 -> Firestore storage initialized.
+1:15/28-7-2023 -> Initializing predictor.py.
+1:15/28-7-2023 -> Loading model best.pt
+1:15/28-7-2023 -> Downloading images.
+1:15/28-7-2023 -> Files downloaded in 0.0010020732879638672
+1:16/28-7-2023 -> Initializing main.py.
+1:16/28-7-2023 -> Firestore realtime database initialized.
+1:16/28-7-2023 -> Firestore storage initialized.
+1:16/28-7-2023 -> Initializing predictor.py.
+1:16/28-7-2023 -> Loading model best.pt
+1:16/28-7-2023 -> Downloading images.
+1:16/28-7-2023 -> Downloading: drone/DJI_0885.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0886.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0887.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0888.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0889.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0890.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0891.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0892.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0893.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0894.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0895.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0896.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0897.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0898.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0899.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0900.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0901.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0902.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0903.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0904.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0905.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0906.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0907.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0908.JPG
+1:16/28-7-2023 -> Downloading: drone/DJI_0909.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0910.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0911.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0912.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0913.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0914.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0915.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0916.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0917.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0918.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0919.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0920.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0921.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0922.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0923.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0924.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0925.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0926.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0927.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0928.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0929.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0930.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0931.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0932.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0933.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0934.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0935.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0936.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0937.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0938.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0939.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0940.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0941.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0942.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0952.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0953.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0954.JPG
+1:17/28-7-2023 -> Downloading: drone/DJI_0955.JPG
+1:18/28-7-2023 -> Downloading: drone/DJI_0956.JPG
+1:18/28-7-2023 -> Downloading: drone/DJI_0957.JPG
+1:18/28-7-2023 -> Downloading: drone/DJI_0958.JPG
+1:18/28-7-2023 -> Downloading: drone/DJI_0959.JPG
+1:18/28-7-2023 -> Downloading: drone/DJI_0960.JPG

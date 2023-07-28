@@ -1,19 +1,22 @@
 FROM debian
 
-RUN apt-get update && apt-get install -y bash
+RUN apt-get update 
+RUN apt-get install -y bash
 RUN apt-get install wget -y
-RUN apt-get install imagemagick -y
 RUN apt-get install zip -y
-RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
-RUN aptget install python3.11 -y
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN apt-get install python3.11 -y
+RUN apt-get install python3-pip python3-dev -y
 
 COPY src /service/src
 COPY model /service/model
 COPY requirements.txt /service/requirements.txt
 COPY main.py /service/main.py
+COPY firebase_key.json /service/firebase_key.json
+COPY config.json /service/config.json
 
 WORKDIR /service
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --break-system-packages
 
 RUN python3.11 main.py
