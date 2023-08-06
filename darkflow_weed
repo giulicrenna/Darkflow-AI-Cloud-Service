@@ -1,7 +1,0 @@
-#!/bin/bash
-
-clear
-
-python3 /etc/darkflow_weed/main.py
-
-exit 0

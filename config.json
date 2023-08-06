@@ -1,5 +1,5 @@
 {
-    "model_name" : "best.pt",
+    "model_name" : "darkflow-test.pt",
  
     "mqtt_host" : "test.mosquitto.org",
     "mqtt_topic" : "darkflowtest",

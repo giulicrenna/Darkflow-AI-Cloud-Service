@@ -19,7 +19,7 @@ from PIL import Image, ImageFile
 
 from src.logger import log
 
-ImageFile.LOAD_TRUNCATED_IMAGES = False
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 ABS_PATH : str = os.getcwd()
 SAVE_PATH : str = 'detections/'
@@ -115,6 +115,8 @@ class Predictor:
                             agnostic_nms=True)[0]
         
         detections = sv.Detections.from_yolov8(result)
+        #For testing purposes
+        log(f'{filename}:{detections}')
         
         labels = [
             f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
@@ -141,10 +143,10 @@ class Predictor:
         for i, box in enumerate(detections.xyxy.tolist()):
             xmin, ymin, xmax, ymax = box
             bbox : dict = {
-                'xmin' : round(xmin, 1),
-                'ymin' : round(ymin, 1),
-                'xmax' : round(xmax, 1),
-                'ymax' : round(ymax, 1)
+                'x1' : round(xmin, 1),
+                'y1' : round(ymin, 1),
+                'x2' : round(xmax, 1),
+                'y2' : round(ymax, 1)
             } 
             
             confidence : int = labels[i].split(' ')[2]
@@ -165,7 +167,11 @@ class Predictor:
         data_json : str = json.dumps(data, indent=2)
         FILENAME: str = filename
                         
-        if self.save_predictions:
+        """
+        <... and not 'None' in single_labels>
+        This prevents the creation and upload of images without predictions
+        """
+        if self.save_predictions and not 'None' in single_labels:
             if self.save_both:
                 FILENAME_ = FILENAME + '_nbbox'
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
@@ -173,8 +179,8 @@ class Predictor:
             if self.save_with_bbox:
                 FILENAME_ = FILENAME + '_bbox'
                 box_annotator = sv.BoxAnnotator(
-                                    thickness=4,
-                                    text_thickness=1,
+                                    thickness=5,
+                                    text_thickness=5,
                                     text_scale=2
                                 )
 
@@ -184,12 +190,14 @@ class Predictor:
                     labels=labels
                 )
                 
-                frame_ = cv2.resize(frame_, (1080, 720))
+                #MULT: int = 1.5
+                #frame = cv2.resize(frame, (1080*MULT, 720*MULT))
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame_)
                 
             else:
                 FILENAME_ = FILENAME + '_nbbox'
-                frame = cv2.resize(frame, (1080, 720))
+                MULT: int = 1.5
+                frame = cv2.resize(frame, (1080*MULT, 720*MULT))
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
                 
             #with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:

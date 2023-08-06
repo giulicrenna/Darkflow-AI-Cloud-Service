@@ -8,6 +8,8 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get install python3.11 -y
 RUN apt-get install python3-pip python3-dev -y
 
+RUN mkdir model
+
 COPY src /service/src
 COPY model /service/model
 COPY requirements.txt /service/requirements.txt

@@ -21,3 +21,4 @@ datasets/hojas
 firebase_key.json
 *.jpeg
 *.JPG
+yolo_detections.log

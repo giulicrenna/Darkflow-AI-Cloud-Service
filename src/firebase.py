@@ -113,7 +113,11 @@ class FirestoreConnector():
         
         return temp_files
     
-    def download_images_stack(self) -> None:
+    """
+    Returns True if new files are available
+    False if no new files are available
+    """
+    def download_images_stack(self) -> bool:
         start = time.time()
         if not os.path.isdir(self.download_path):
             os.mkdir(self.download_path)
@@ -125,16 +129,23 @@ class FirestoreConnector():
         current_downloaded: list = os.listdir(self.download_path)
         
         bucket = storage.bucket()
+        new_files: list = []
         
         for file in self.files_list:
             filename: str = str(file).split('/')[1]
 
             if not filename in current_downloaded:
+                new_files.append(filename)
                 blob = bucket.blob(file)
                 log(f'Downloading: {file}')
                 blob.download_to_filename(os.path.join(self.download_path, filename))
-        log(f'Files downloaded in {time.time() - start}')
-    
+        
+        if len(new_files) != 0:
+            log(f'Files downloaded in {time.time() - start}')
+            return True
+        
+        return False
+        
     def upload_image_stack(self,
                            final_detections_path: str = FINAL_DETECTIONS_PATH,
                            source_path: str = None) -> None:
