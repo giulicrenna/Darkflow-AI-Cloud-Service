@@ -16,8 +16,8 @@ datasets/hojas
 *.pyc
 *.pyc
 **/__pycache__/ 
-*.png
 *.json
+detections
 firebase_key.json
 *.jpeg
 *.JPG
