@@ -5,9 +5,11 @@ from firebase_admin import credentials
 from firebase_admin import storage
 from firebase_admin import db
 from src.logger import log
+from src.check_processed import check_processed
 
 KEY_PATH: str = os.path.join(
     os.getcwd(),
+    'json',
     'firebase_key.json'
 )
 DOWNLOAD_PATH: str = os.path.join(
@@ -52,9 +54,15 @@ class FirestoreRealTimeDatabase():
         log('Firestore realtime database initialized.')
         
     def appendData(self, dataJSON: dict, dataReference: str) -> None:
-        reference = db.reference(f'{self.reference}/{dataReference}', self.RTD)
-        reference.set(dataJSON)
-        
+        try:
+            reference = db.reference(f'{self.reference}/{dataReference}', self.RTD)
+            reference.set(dataJSON)
+        except Exception as e:
+            log(f'Exception {e} in file {os.path.basename(__file__)}')
+            pass
+    """
+    Return True if the registry exist
+    """
     def register_exists(self, dataReference: str) -> bool:
         reference = db.reference(f'{self.reference}/{dataReference}', self.RTD)
         snapshot = reference.get()
@@ -119,25 +127,33 @@ class FirestoreConnector():
     """
     def download_images_stack(self) -> bool:
         start = time.time()
+        
         if not os.path.isdir(self.download_path):
             os.mkdir(self.download_path)
-            
-        if len(self.files_list) <= 0:
-            print('No files in memory.\n¿Have you runned FirestoreConnector.files_list()?')
-            return
         
-        current_downloaded: list = os.listdir(self.download_path)
+        if len(self.files_list) <= 0:
+            log('No files in memory.\n¿Have you runned FirestoreConnector.files_list()?')
+            return
         
         bucket = storage.bucket()
         new_files: list = []
         
         for file in self.files_list:
             filename: str = str(file).split('/')[1]
-
-            if not filename in current_downloaded:
+            
+            """
+            Check if file was processed.
+            """
+            if not check_processed('processed.log', file):
                 new_files.append(filename)
                 blob = bucket.blob(file)
+                
                 log(f'Downloading: {file}')
+                
+                """
+                Add file into registry of processed files to not re-process
+                """
+                log(file, 'processed.log', False)
                 blob.download_to_filename(os.path.join(self.download_path, filename))
         
         if len(new_files) != 0:
@@ -154,6 +170,9 @@ class FirestoreConnector():
         if source_path == None:
             source_path = self.detection_path
         
+        """
+        Files that are in the cloud.
+        """
         uploaded_files: list = self.files_listing(source_path)
         uploaded_files = [str(x).split('/')[1] for x in uploaded_files]
         
@@ -169,6 +188,7 @@ class FirestoreConnector():
                     filename: str = file.split('.')[0]
                     log(f'Uploading {filename}.')
                     blob.upload_from_filename(local_path)
+                    os.remove(local_path)
                 except Exception as e:
                     msg: str = f'Exception {e}'
                     log(msg)

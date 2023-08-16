@@ -55,7 +55,7 @@ class Predictor:
         
         log(f'Initializing {os.path.basename(__file__)}.')
         
-        print(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
+        log(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
             \n\t-mqtt_address:{mqtt_address}\n\t-mqtt_topic:{mqtt_topic}\n\t-mqtt_port:{mqtt_port}\n\t-tcp_port:{tcp_port}\n')
         
         os.makedirs(SAVE_PATH) if not os.path.exists(SAVE_PATH) else ...
@@ -70,7 +70,6 @@ class Predictor:
     def load_model(self) -> object:
         try:
             log(f'Loading model {self.model_name}')
-            print(f'Cargando modelo {self.model_name}')
             
             model = YOLO(f'{ABS_PATH}/model/{self.model_name}')
         
@@ -106,7 +105,9 @@ class Predictor:
     def send_tcp_message(self, message : str = '\{\}') -> object:
         ...
     
-    def predict_from_b64(self, b64_image: str, filename = str(uuid.uuid4())) -> str:
+    def predict_from_b64(self, b64_image: str,
+                         filename = str(uuid.uuid4()),
+                         extra_data: dict = {}) -> str:
         img = imread(io.BytesIO(base64.b64decode(b64_image)))
         
         frame = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
@@ -162,9 +163,8 @@ class Predictor:
         if len(object_metadata) == 0:
             object_metadata = ['None']
         
-        data['metadata'] = object_metadata                
-                    
-        data_json : str = json.dumps(data, indent=2)
+        data['metadata'] = object_metadata                                    
+        
         FILENAME: str = filename
                         
         """
@@ -190,8 +190,7 @@ class Predictor:
                     labels=labels
                 )
                 
-                #MULT: int = 1.5
-                #frame = cv2.resize(frame, (1080*MULT, 720*MULT))
+                frame = cv2.resize(frame, (1080, 720))
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame_)
                 
             else:
@@ -200,11 +199,12 @@ class Predictor:
                 frame = cv2.resize(frame, (1080*MULT, 720*MULT))
                 cv2.imwrite(os.path.join(SAVE_PATH, f'{FILENAME_}.png'), frame)
                 
-            #with open(os.path.join(SAVE_PATH, f'{FILENAME}.json'), 'w+') as file:
-                #file.write(data_json)
-            
+        data_json : str = json.dumps(data, indent=2)
         self.publish(data_json) if self.use_mqtt else ...
-            
+        
+        for key, value in extra_data.items():
+           data[key] = value
+           
         return data
     
     def single_prediction(self) -> dict:
