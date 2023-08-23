@@ -3562,3 +3562,419 @@
 3:5/16-8-2023 -> Hirschfeldia_incana.jpg : {'timestamp': 1692165950, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0.0, 'y1': 860.2, 'x2': 2736.0, 'y2': 3409.6}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.32', 'bbox': {'x1': 2.5, 'y1': 901.6, 'x2': 2190.3, 'y2': 3502.6}}], 'source_path': 'drone'}
 3:5/16-8-2023 -> test:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
 3:5/16-8-2023 -> test.JPG : {'timestamp': 1692165952, 'detected_labels': ['None'], 'metadata': ['None'], 'source_path': 'drone'}
+14:26/23-8-2023 -> Initializing main.py.
+14:27/23-8-2023 -> Initializing main.py.
+14:29/23-8-2023 -> Initializing main.py.
+14:29/23-8-2023 -> Initializing main.py.
+14:35/23-8-2023 -> Initializing main.py.
+14:42/23-8-2023 -> Initializing main.py.
+14:44/23-8-2023 -> Initializing main.py.
+14:44/23-8-2023 -> Initializing main.py.
+14:44/23-8-2023 -> Initializing main.py.
+14:45/23-8-2023 -> Initializing main.py.
+14:46/23-8-2023 -> Initializing main.py.
+14:46/23-8-2023 -> Initializing main.py.
+14:49/23-8-2023 -> Initializing main.py.
+14:49/23-8-2023 -> Initializing main.py.
+14:49/23-8-2023 -> Initializing main.py.
+14:50/23-8-2023 -> Initializing main.py.
+14:59/23-8-2023 -> Initializing main.py.
+14:59/23-8-2023 -> Initializing main.py.
+15:0/23-8-2023 -> Initializing main.py.
+15:0/23-8-2023 -> Initializing main.py.
+15:1/23-8-2023 -> Initializing main.py.
+15:1/23-8-2023 -> Initializing predictor.py.
+15:1/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:1/23-8-2023 -> Loading model darkflow-test.pt
+15:1/23-8-2023 -> 0968601d-01c7-4dee-b62f-fc40c3dd9ef4:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:1/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\f70acddd-b5e2-4aa3-bb67-abfe0438681a.jpg : {'timestamp': 1692813714, 'detected_labels': ['None'], 'metadata': ['None']}
+15:1/23-8-2023 -> Exception at task() instance: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\giuli\\OneDrive\\Documentos\\GitHub\\Darkflow-Weed-AI\\downloads\\f70acddd-b5e2-4aa3-bb67-abfe0438681a.jpg'
+15:1/23-8-2023 -> Initializing predictor.py.
+15:1/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:1/23-8-2023 -> Loading model darkflow-test.pt
+15:2/23-8-2023 -> 0968601d-01c7-4dee-b62f-fc40c3dd9ef4:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:2/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\fb145931-736e-4114-89cd-7b6f24902ac3.jpg : {'timestamp': 1692813720, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:2/23-8-2023 -> Exception at task() instance: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\giuli\\OneDrive\\Documentos\\GitHub\\Darkflow-Weed-AI\\downloads\\fb145931-736e-4114-89cd-7b6f24902ac3.jpg'
+15:2/23-8-2023 -> Initializing predictor.py.
+15:2/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:2/23-8-2023 -> Loading model darkflow-test.pt
+15:2/23-8-2023 -> 0968601d-01c7-4dee-b62f-fc40c3dd9ef4:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:2/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\73c28799-e2a3-440e-ba08-63e91356afc6.jpg : {'timestamp': 1692813727, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:2/23-8-2023 -> Exception at task() instance: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\giuli\\OneDrive\\Documentos\\GitHub\\Darkflow-Weed-AI\\downloads\\73c28799-e2a3-440e-ba08-63e91356afc6.jpg'
+15:2/23-8-2023 -> Initializing main.py.
+15:2/23-8-2023 -> Initializing main.py.
+15:3/23-8-2023 -> Initializing main.py.
+15:4/23-8-2023 -> Initializing main.py.
+15:4/23-8-2023 -> Initializing main.py.
+15:4/23-8-2023 -> Initializing main.py.
+15:5/23-8-2023 -> Initializing main.py.
+15:5/23-8-2023 -> Initializing main.py.
+15:5/23-8-2023 -> Initializing predictor.py.
+15:5/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:5/23-8-2023 -> Loading model darkflow-test.pt
+15:5/23-8-2023 -> eff1b123-13cb-4754-bdec-d5ef8fa6dad0:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:5/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\2dff7edc-1f1d-4e51-9ddf-9e3bb9dc7a9a.jpg : {'timestamp': 1692813920, 'detected_labels': ['None'], 'metadata': ['None']}
+15:5/23-8-2023 -> Initializing predictor.py.
+15:5/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:5/23-8-2023 -> Loading model darkflow-test.pt
+15:5/23-8-2023 -> eff1b123-13cb-4754-bdec-d5ef8fa6dad0:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:5/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\993be777-6d96-4bba-a9d6-c12a359dccd2.jpg : {'timestamp': 1692813927, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:5/23-8-2023 -> Initializing predictor.py.
+15:5/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:5/23-8-2023 -> Loading model darkflow-test.pt
+15:5/23-8-2023 -> eff1b123-13cb-4754-bdec-d5ef8fa6dad0:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:5/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\70332f1d-7128-4f69-a3ee-136d75524953.jpg : {'timestamp': 1692813934, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:11/23-8-2023 -> Initializing main.py.
+15:11/23-8-2023 -> Initializing main.py.
+15:11/23-8-2023 -> Initializing main.py.
+15:12/23-8-2023 -> Initializing main.py.
+15:12/23-8-2023 -> Initializing predictor.py.
+15:12/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:12/23-8-2023 -> Loading model darkflow-test.pt
+15:12/23-8-2023 -> 193135a9-baeb-4b80-a104-17600d2d415f:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:12/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\6c0f6bef-94c7-485a-b260-2a4ef36ac863.jpg : {'timestamp': 1692814336, 'detected_labels': ['None'], 'metadata': ['None']}
+15:12/23-8-2023 -> Initializing predictor.py.
+15:12/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:12/23-8-2023 -> Loading model darkflow-test.pt
+15:12/23-8-2023 -> 193135a9-baeb-4b80-a104-17600d2d415f:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:12/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\28784a35-db2c-422b-a959-bcf4eefc1033.jpg : {'timestamp': 1692814343, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:12/23-8-2023 -> Initializing predictor.py.
+15:12/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:12/23-8-2023 -> Loading model darkflow-test.pt
+15:12/23-8-2023 -> 193135a9-baeb-4b80-a104-17600d2d415f:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:12/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\e0ce6639-e76b-4a99-8304-c58eea780716.jpg : {'timestamp': 1692814351, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:16/23-8-2023 -> Initializing main.py.
+15:16/23-8-2023 -> Initializing main.py.
+15:16/23-8-2023 -> Initializing main.py.
+15:17/23-8-2023 -> Initializing main.py.
+15:18/23-8-2023 -> Initializing main.py.
+15:19/23-8-2023 -> Initializing main.py.
+15:19/23-8-2023 -> exception at simple_detection() instance: group argument must be None for now
+15:20/23-8-2023 -> Initializing main.py.
+15:20/23-8-2023 -> Initializing predictor.py.
+15:20/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darklow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:20/23-8-2023 -> Loading model darklow-test.pt
+15:20/23-8-2023 -> Exception at task() instance: 'NoneType' object has no attribute 'predict'
+15:20/23-8-2023 -> Initializing predictor.py.
+15:20/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darklow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:20/23-8-2023 -> Loading model darklow-test.pt
+15:20/23-8-2023 -> Exception at task() instance: 'NoneType' object has no attribute 'predict'
+15:20/23-8-2023 -> Initializing predictor.py.
+15:20/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darklow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:20/23-8-2023 -> Loading model darklow-test.pt
+15:20/23-8-2023 -> Exception at task() instance: 'NoneType' object has no attribute 'predict'
+15:20/23-8-2023 -> Initializing predictor.py.
+15:20/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darklow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:20/23-8-2023 -> Loading model darklow-test.pt
+15:20/23-8-2023 -> Exception at task() instance: 'NoneType' object has no attribute 'predict'
+15:21/23-8-2023 -> Initializing main.py.
+15:21/23-8-2023 -> Initializing predictor.py.
+15:21/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:21/23-8-2023 -> Loading model darkflow-test.pt
+15:21/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:21/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\b22a57f8-44ad-4987-9f52-a5b784ef5b74.jpg : {'timestamp': 1692814871, 'detected_labels': ['None'], 'metadata': ['None']}
+15:21/23-8-2023 -> Initializing predictor.py.
+15:21/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:21/23-8-2023 -> Loading model darkflow-test.pt
+15:21/23-8-2023 -> Initializing predictor.py.
+15:21/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:21/23-8-2023 -> Loading model darkflow-test.pt
+15:21/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:21/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\89fbc3da-9706-45e7-85d2-93602ea7c80f.jpg : {'timestamp': 1692814879, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:21/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:21/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\f5d7b72a-5c3e-49b8-83bf-53873cbfa250.jpg : {'timestamp': 1692814883, 'detected_labels': ['None'], 'metadata': ['None']}
+15:21/23-8-2023 -> Initializing predictor.py.
+15:21/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:21/23-8-2023 -> Loading model darkflow-test.pt
+15:21/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:21/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\0813b03e-2eec-45c9-97db-9e20579e07ba.jpg : {'timestamp': 1692814892, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:21/23-8-2023 -> Initializing predictor.py.
+15:21/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:21/23-8-2023 -> Loading model darkflow-test.pt
+15:21/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:21/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\1d002c45-2973-4e4f-be91-b0c7f57fa62c.jpg : {'timestamp': 1692814901, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:22/23-8-2023 -> Initializing predictor.py.
+15:22/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:22/23-8-2023 -> Loading model darkflow-test.pt
+15:22/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:22/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\0996be62-de02-43d3-a1c2-9f7d9388ecab.jpg : {'timestamp': 1692814933, 'detected_labels': ['None'], 'metadata': ['None']}
+15:22/23-8-2023 -> Initializing predictor.py.
+15:22/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:22/23-8-2023 -> Loading model darkflow-test.pt
+15:22/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:22/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\42cedda1-ce67-4f3f-b3e6-10a730ed4ecb.jpg : {'timestamp': 1692814940, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:22/23-8-2023 -> Initializing predictor.py.
+15:22/23-8-2023 -> Iniciando Predictor con parámetros:
+	-camera_port:0
+	-model_name:darkflow-test.pt             
+	-mqtt_address:test.mosquitto.org
+	-mqtt_topic:darkflowtest
+	-mqtt_port:1883
+	-tcp_port:25400
+
+15:22/23-8-2023 -> Loading model darkflow-test.pt
+15:22/23-8-2023 -> 0959bd20-8d9f-4f48-bad6-8ca55120c2d5:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:22/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\d5ab8be2-bf37-4266-b1d4-759a1b1fe893.jpg : {'timestamp': 1692814947, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:24/23-8-2023 -> Initializing main.py.
+15:27/23-8-2023 -> Initializing main.py.
+15:28/23-8-2023 -> Initializing main.py.
+15:28/23-8-2023 -> Initializing main.py.
+15:29/23-8-2023 -> Initializing main.py.
+15:29/23-8-2023 -> Initializing predictor.py.
+15:29/23-8-2023 -> Loading model darkflow-test.pt
+15:29/23-8-2023 -> f38ba421-8a2c-4324-bd10-8f20487f83af:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:29/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\34a2c643-ba16-4dfd-b152-f717d77630b1.jpg : {'timestamp': 1692815354, 'detected_labels': ['None'], 'metadata': ['None']}
+15:29/23-8-2023 -> f38ba421-8a2c-4324-bd10-8f20487f83af:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:29/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\8bd6152e-5ed8-46d3-ba01-45683c1e2579.jpg : {'timestamp': 1692815361, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:29/23-8-2023 -> f38ba421-8a2c-4324-bd10-8f20487f83af:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:29/23-8-2023 -> C:\Users\giuli\OneDrive\Documentos\GitHub\Darkflow-Weed-AI\downloads\fc8681f1-ba84-4922-84cc-2a96840fefda.jpg : {'timestamp': 1692815369, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:29/23-8-2023 -> Initializing main.py.
+15:29/23-8-2023 -> Initializing predictor.py.
+15:29/23-8-2023 -> Loading model darkflow-test.pt
+15:30/23-8-2023 -> cb07ee4e-b035-4d43-abff-60364304313d:Detections(xyxy=array([], shape=(0, 4), dtype=float32), class_id=array([], dtype=int32), confidence=array([], dtype=float32), tracker_id=None)
+15:30/23-8-2023 -> cb07ee4e-b035-4d43-abff-60364304313d:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:30/23-8-2023 -> cb07ee4e-b035-4d43-abff-60364304313d:Detections(xyxy=array([[       1836,      941.69,      2145.7,      1373.5],
+       [     2242.4,      1643.8,      2430.7,      1858.4]], dtype=float32), class_id=array([1, 1]), confidence=array([    0.75905,     0.33396], dtype=float32), tracker_id=None)
+15:32/23-8-2023 -> Initializing main.py.
+15:32/23-8-2023 -> Initializing predictor.py.
+15:32/23-8-2023 -> Loading model darkflow-test.pt
+15:32/23-8-2023 -> e7b9a6b0-03ab-4b6a-977a-03e3bbc55826 : {'timestamp': 1692815566, 'detected_labels': ['None'], 'metadata': ['None']}
+15:32/23-8-2023 -> e7b9a6b0-03ab-4b6a-977a-03e3bbc55826 : {'timestamp': 1692815570, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:32/23-8-2023 -> e7b9a6b0-03ab-4b6a-977a-03e3bbc55826 : {'timestamp': 1692815574, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836.0, 'y1': 941.7, 'x2': 2145.7, 'y2': 1373.5}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242.4, 'y1': 1643.8, 'x2': 2430.7, 'y2': 1858.4}}]}
+15:33/23-8-2023 -> Initializing main.py.
+15:34/23-8-2023 -> Initializing predictor.py.
+15:34/23-8-2023 -> Loading model darkflow-test.pt
+15:34/23-8-2023 -> 606e55d7-c70e-4d25-afda-a973c6f96d43 : {'timestamp': 1692815648, 'detected_labels': ['None'], 'metadata': ['None']}
+15:34/23-8-2023 -> 606e55d7-c70e-4d25-afda-a973c6f96d43 : {'timestamp': 1692815653, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:34/23-8-2023 -> 606e55d7-c70e-4d25-afda-a973c6f96d43 : {'timestamp': 1692815658, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:35/23-8-2023 -> Initializing main.py.
+15:36/23-8-2023 -> Initializing main.py.
+15:36/23-8-2023 -> Initializing predictor.py.
+15:36/23-8-2023 -> Loading model darkflow-test.pt
+15:36/23-8-2023 -> 0074dd1f-ffe1-490a-a8e6-b9257b2bc237 : {'timestamp': 1692815769, 'detected_labels': ['None'], 'metadata': ['None']}
+15:36/23-8-2023 -> 0074dd1f-ffe1-490a-a8e6-b9257b2bc237 : {'timestamp': 1692815773, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:36/23-8-2023 -> 0074dd1f-ffe1-490a-a8e6-b9257b2bc237 : {'timestamp': 1692815778, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:36/23-8-2023 -> 0074dd1f-ffe1-490a-a8e6-b9257b2bc237 : {'timestamp': 1692815784, 'detected_labels': ['None'], 'metadata': ['None']}
+15:37/23-8-2023 -> Initializing main.py.
+15:40/23-8-2023 -> Initializing predictor.py.
+15:40/23-8-2023 -> Loading model darkflow-test.pt
+15:40/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816043, 'detected_labels': ['None'], 'metadata': ['None']}
+15:40/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816049, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:40/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816053, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:40/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816058, 'detected_labels': ['None'], 'metadata': ['None']}
+15:45/23-8-2023 -> Initializing predictor.py.
+15:45/23-8-2023 -> Loading model darkflow-test.pt
+15:45/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816337, 'detected_labels': ['None'], 'metadata': ['None']}
+15:45/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816342, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:45/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816346, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:45/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816351, 'detected_labels': ['None'], 'metadata': ['None']}
+15:46/23-8-2023 -> Initializing predictor.py.
+15:46/23-8-2023 -> Loading model darkflow-test.pt
+15:46/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816384, 'detected_labels': ['None'], 'metadata': ['None']}
+15:46/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816387, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:46/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816391, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:46/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816395, 'detected_labels': ['None'], 'metadata': ['None']}
+15:48/23-8-2023 -> Initializing predictor.py.
+15:48/23-8-2023 -> Loading model darkflow-test.pt
+15:48/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816508, 'detected_labels': ['None'], 'metadata': ['None']}
+15:48/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816512, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:48/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816516, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:48/23-8-2023 -> a2dcdb7e-ad34-4ea7-82d0-e10f8ceec6d7 : {'timestamp': 1692816521, 'detected_labels': ['None'], 'metadata': ['None']}
+15:53/23-8-2023 -> Initializing main.py.
+15:53/23-8-2023 -> Initializing main.py.
+15:53/23-8-2023 -> Initializing predictor.py.
+15:53/23-8-2023 -> Loading model darkflow-test.pt
+15:53/23-8-2023 -> b95acb5e-e5ab-41f6-8fde-7d9486326af2.jpg : {'timestamp': 1692816817, 'detected_labels': ['None'], 'metadata': ['None']}
+15:53/23-8-2023 -> 6b153dd1-8103-46c4-87ad-acdfff6e5bc0.jpg : {'timestamp': 1692816821, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:53/23-8-2023 -> 2ea24e0b-331d-4d17-9b5d-1fb56b769772.jpg : {'timestamp': 1692816825, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:53/23-8-2023 -> 4470542b-a427-46f4-826f-ddc04ce1fc6c.jpg : {'timestamp': 1692816829, 'detected_labels': ['None'], 'metadata': ['None']}
+15:54/23-8-2023 -> Initializing main.py.
+15:54/23-8-2023 -> Initializing predictor.py.
+15:54/23-8-2023 -> Loading model darkflow-test.pt
+15:54/23-8-2023 -> Initializing predictor.py.
+15:54/23-8-2023 -> Loading model darkflow-test.pt
+15:54/23-8-2023 -> 1d98df8f-324a-4a79-9c5b-2f9af6646ad6.jpg : {'timestamp': 1692816896, 'detected_labels': ['None'], 'metadata': ['None']}
+15:55/23-8-2023 -> b7f9d1dd-373c-4456-a36a-a9fa984d630b.jpg : {'timestamp': 1692816901, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:55/23-8-2023 -> a6dadeae-2b61-4835-9b5e-18ed759680e7.jpg : {'timestamp': 1692816905, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:55/23-8-2023 -> ca1a4493-753c-43cc-8e1e-f5643d8fdd38.jpg : {'timestamp': 1692816909, 'detected_labels': ['None'], 'metadata': ['None']}
+15:56/23-8-2023 -> Initializing predictor.py.
+15:56/23-8-2023 -> Loading model darkflow-test.pt
+15:56/23-8-2023 -> Initializing predictor.py.
+15:56/23-8-2023 -> Loading model darkflow-test.pt
+15:56/23-8-2023 -> 983d4d07-6098-4406-a2a2-ef1ad479d1ab.jpg : {'timestamp': 1692816999, 'detected_labels': ['None'], 'metadata': ['None']}
+15:56/23-8-2023 -> 4e52a702-f194-4810-a3b7-bbc44c6b4213.jpg : {'timestamp': 1692817003, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:56/23-8-2023 -> c1a72b86-295e-4383-b358-5b83d21b5f68.jpg : {'timestamp': 1692817007, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:56/23-8-2023 -> a951431a-9f43-4601-9a09-5a707a285a61.jpg : {'timestamp': 1692817010, 'detected_labels': ['None'], 'metadata': ['None']}
+15:57/23-8-2023 -> Initializing main.py.
+15:57/23-8-2023 -> Initializing predictor.py.
+15:57/23-8-2023 -> Loading model darkflow-test.pt
+15:57/23-8-2023 -> Initializing predictor.py.
+15:57/23-8-2023 -> Loading model darkflow-test.pt
+15:57/23-8-2023 -> Initializing predictor.py.
+15:57/23-8-2023 -> Loading model darkflow-test.pt
+15:58/23-8-2023 -> c893196f-2e7d-4280-b3d8-34c2102c028d.jpg : {'timestamp': 1692817081, 'detected_labels': ['None'], 'metadata': ['None']}
+15:58/23-8-2023 -> 9f70ca24-216a-4598-8456-3e780c121be5.jpg : {'timestamp': 1692817081, 'detected_labels': ['None'], 'metadata': ['None']}
+15:58/23-8-2023 -> faf3f515-739e-4651-8b73-6df499986b26.jpg : {'timestamp': 1692817082, 'detected_labels': ['None'], 'metadata': ['None']}
+15:58/23-8-2023 -> 47d6a57a-f505-4916-8e81-4820ccb74e9e.jpg : {'timestamp': 1692817086, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:58/23-8-2023 -> 431b7d57-2a3f-4d64-bd25-e060400e222c.jpg : {'timestamp': 1692817087, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:58/23-8-2023 -> 0b709f05-dcba-4bec-a095-6e384b407c20.jpg : {'timestamp': 1692817091, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:58/23-8-2023 -> af6e2b09-763a-476b-9dc7-75f357cc0306.jpg : {'timestamp': 1692817091, 'detected_labels': ['Conyza Bonariensis', 'Conyza Bonariensis'], 'metadata': [{'object_name': 'Conyza Bonariensis', 'confidence': '0.76', 'bbox': {'x1': 1836, 'y1': 942, 'x2': 2146, 'y2': 1374}}, {'object_name': 'Conyza Bonariensis', 'confidence': '0.33', 'bbox': {'x1': 2242, 'y1': 1644, 'x2': 2431, 'y2': 1858}}]}
+15:58/23-8-2023 -> 3d8f3b77-72fd-40d3-98b3-3bef77d73ca8.jpg : {'timestamp': 1692817094, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:58/23-8-2023 -> e9343c4c-8dfb-44ff-9f20-92a7877fe28c.jpg : {'timestamp': 1692817096, 'detected_labels': ['None'], 'metadata': ['None']}
+15:58/23-8-2023 -> fc0e1d72-1f21-44e6-81b3-61c574d9cbfa.jpg : {'timestamp': 1692817098, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
+15:58/23-8-2023 -> 68edddf4-a82e-4231-922f-7bb6a7d253b4.jpg : {'timestamp': 1692817099, 'detected_labels': ['None'], 'metadata': ['None']}
+15:58/23-8-2023 -> c40928d0-a184-4f19-a4dc-6ec40aae97c9.jpg : {'timestamp': 1692817101, 'detected_labels': ['None'], 'metadata': ['None']}

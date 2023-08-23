@@ -12,6 +12,6 @@
     "epochs" : 10,
     "batch" : 8,
 
-    "api_host": "127.0.0.1",
-    "api_port" : 5555
+    "api_host": "0.0.0.0",
+    "api_port" : 8000
 }

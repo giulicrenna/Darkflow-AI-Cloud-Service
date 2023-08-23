@@ -21,4 +21,4 @@ WORKDIR /service
 
 RUN pip install -r requirements.txt --break-system-packages
 
-RUN python3.11 main.py
+CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "80"]

@@ -55,8 +55,8 @@ class Predictor:
         
         log(f'Initializing {os.path.basename(__file__)}.')
         
-        log(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
-            \n\t-mqtt_address:{mqtt_address}\n\t-mqtt_topic:{mqtt_topic}\n\t-mqtt_port:{mqtt_port}\n\t-tcp_port:{tcp_port}\n')
+        #log(f'Iniciando Predictor con parámetros:\n\t-camera_port:{camera_port}\n\t-model_name:{model_name} \
+        #    \n\t-mqtt_address:{mqtt_address}\n\t-mqtt_topic:{mqtt_topic}\n\t-mqtt_port:{mqtt_port}\n\t-tcp_port:{tcp_port}\n')
         
         os.makedirs(SAVE_PATH) if not os.path.exists(SAVE_PATH) else ...
         
@@ -112,12 +112,11 @@ class Predictor:
         
         frame = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
         
-        result = self.predictor_model(frame,
-                            agnostic_nms=True)[0]
+        result : YOLO = self.predictor_model.predict(frame,
+                            agnostic_nms=True,
+                            verbose=False)[0]
         
         detections = sv.Detections.from_yolov8(result)
-        #For testing purposes
-        log(f'{filename}:{detections}')
         
         labels = [
             f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
@@ -144,10 +143,10 @@ class Predictor:
         for i, box in enumerate(detections.xyxy.tolist()):
             xmin, ymin, xmax, ymax = box
             bbox : dict = {
-                'x1' : round(xmin, 1),
-                'y1' : round(ymin, 1),
-                'x2' : round(xmax, 1),
-                'y2' : round(ymax, 1)
+                'x1' : round(xmin),
+                'y1' : round(ymin),
+                'x2' : round(xmax),
+                'y2' : round(ymax)
             } 
             
             confidence : int = labels[i].split(' ')[2]
@@ -204,7 +203,10 @@ class Predictor:
         
         for key, value in extra_data.items():
            data[key] = value
-           
+        
+        #For testing purposes
+        #log(f'{filename}:{detections}')
+        
         return data
     
     def single_prediction(self) -> dict:
