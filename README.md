@@ -58,3 +58,6 @@ if __name__ == '__main__':
             pass
         
 ```
+### Service Work Diagram
+
+![Alt text](https://github.com/giulicrenna/Darkflow-Weed-AI/blob/main/static/diagram.png)
