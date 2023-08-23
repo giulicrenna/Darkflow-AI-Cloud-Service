@@ -1,5 +1,7 @@
 FROM ubuntu
 
+EXPOSE 80/tcp
+
 RUN apt-get update 
 RUN apt-get install -y bash
 RUN apt-get install wget -y

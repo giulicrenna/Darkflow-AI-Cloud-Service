@@ -2,15 +2,12 @@ env
 .env
 venv
 .venv
-model/*
-.model/*
 runs
 .runs
 .vscode/settings.json
 media/Tex/d9294a8d6b301b15.log
 .datasets/hojas
 datasets/hojas
-*.pt
 *.pyc
 *.pyc
 *.pyc
@@ -23,3 +20,5 @@ firebase_key.json
 *.JPG
 yolo_detections.log
 *.log
+model/best.pt
+model/yolov5nu.pt
