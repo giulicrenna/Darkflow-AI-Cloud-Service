@@ -10,7 +10,7 @@ sudo docker build -t api .
 ```
 To run the container image:
 ```
-docker run -d --name api -p 8000:8000 -v ~/api_logs:/service/logs api
+docker run -d --name api -p 8000:8000 -v ~/api_logs:/service/logs --restart=always api
 ```
 
 ## Dependencies
