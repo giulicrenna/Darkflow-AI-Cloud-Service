@@ -1,7 +1,5 @@
 FROM ubuntu
 
-EXPOSE 80/tcp
-
 RUN apt-get update 
 RUN apt-get install -y bash
 RUN apt-get install wget -y
@@ -10,7 +8,7 @@ RUN apt-get install python3.11 -y
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get install python3-pip python3-dev -y
 
-RUN mkdir model
+RUN mkdir downloads
 
 COPY src /service/src
 COPY model /service/model
@@ -23,4 +21,4 @@ WORKDIR /service
 
 RUN pip install -r requirements.txt 
 
-CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "8000"]
