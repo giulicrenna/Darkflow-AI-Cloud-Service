@@ -3978,3 +3978,414 @@
 15:58/23-8-2023 -> fc0e1d72-1f21-44e6-81b3-61c574d9cbfa.jpg : {'timestamp': 1692817098, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.51', 'bbox': {'x1': 0, 'y1': 834, 'x2': 2736, 'y2': 3409}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.31', 'bbox': {'x1': 2, 'y1': 834, 'x2': 2191, 'y2': 3504}}]}
 15:58/23-8-2023 -> 68edddf4-a82e-4231-922f-7bb6a7d253b4.jpg : {'timestamp': 1692817099, 'detected_labels': ['None'], 'metadata': ['None']}
 15:58/23-8-2023 -> c40928d0-a184-4f19-a4dc-6ec40aae97c9.jpg : {'timestamp': 1692817101, 'detected_labels': ['None'], 'metadata': ['None']}
+15:22/24-8-2023 -> Initializing main.py.
+15:23/24-8-2023 -> Initializing main.py.
+15:27/24-8-2023 -> Initializing main.py.
+15:27/24-8-2023 -> Initializing predictor.py.
+15:27/24-8-2023 -> Loading model darkflow-test.pt
+15:27/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000002901C9462F0>
+15:28/24-8-2023 -> Initializing predictor.py.
+15:28/24-8-2023 -> Loading model darkflow-test.pt
+15:28/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000002901C980810>
+15:29/24-8-2023 -> Initializing predictor.py.
+15:29/24-8-2023 -> Loading model darkflow-test.pt
+15:29/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000002901CA5AB60>
+15:30/24-8-2023 -> Initializing main.py.
+15:30/24-8-2023 -> Initializing predictor.py.
+15:30/24-8-2023 -> Loading model darkflow-test.pt
+15:30/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000017070C20810>
+15:31/24-8-2023 -> Initializing predictor.py.
+15:31/24-8-2023 -> Loading model darkflow-test.pt
+15:31/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000017070C57510>
+15:32/24-8-2023 -> Initializing predictor.py.
+15:32/24-8-2023 -> Loading model darkflow-test.pt
+15:32/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x00000170754B1DF0>
+15:32/24-8-2023 -> Initializing main.py.
+15:32/24-8-2023 -> Initializing predictor.py.
+15:32/24-8-2023 -> Loading model darkflow-test.pt
+15:32/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000001E4BB952C50>
+15:32/24-8-2023 -> Initializing main.py.
+15:32/24-8-2023 -> Initializing predictor.py.
+15:32/24-8-2023 -> Loading model darkflow-test.pt
+15:32/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x000001AD9DD478B0>
+15:32/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000001AD9AB8DE90>
+15:33/24-8-2023 -> Initializing main.py.
+15:33/24-8-2023 -> Initializing predictor.py.
+15:33/24-8-2023 -> Loading model darkflow-test.pt
+15:33/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x000001CC74F4B8E0>
+15:33/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x000001CC7003EC50>
+15:34/24-8-2023 -> Initializing main.py.
+15:34/24-8-2023 -> Initializing main.py.
+15:34/24-8-2023 -> Initializing predictor.py.
+15:34/24-8-2023 -> Loading model darkflow-test.pt
+15:34/24-8-2023 -> {
+  "error": {
+    "code": 400,
+    "message": "Invalid HTTP method/URL pair."
+  }
+}
+15:34/24-8-2023 -> In download_image() instance: [Errno 22] Invalid argument: '{\n  "error": {\n    "code": 400,\n    "message": "Invalid HTTP method/URL pair."\n  }\n}'
+15:34/24-8-2023 -> Initializing main.py.
+15:35/24-8-2023 -> Initializing main.py.
+15:35/24-8-2023 -> Initializing predictor.py.
+15:35/24-8-2023 -> Loading model darkflow-test.pt
+15:35/24-8-2023 -> URL: https://firebasestorage.googleapis.com/v0/b/cda-darkflow.appspot.com/o/drone/DJI_0886.JPG?alt=media&token=766494c0-e24d-492a-9429-7cd65accd6ff
+15:35/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x0000023E12BCB8E0>
+15:35/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023E12C10F40>
+15:36/24-8-2023 -> Initializing predictor.py.
+15:36/24-8-2023 -> Loading model darkflow-test.pt
+15:36/24-8-2023 -> URL: https://firebasestorage.googleapis.com/v0/b/cda-darkflow.appspot.com/o/drone/DJI_0886.JPG?alt=media&token=766494c0-e24d-492a-9429-7cd65accd6ff
+15:36/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x0000023E0F9CF880>
+15:36/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023E0FA97A60>
+15:36/24-8-2023 -> Initializing predictor.py.
+15:36/24-8-2023 -> Loading model darkflow-test.pt
+15:36/24-8-2023 -> URL: https://firebasestorage.googleapis.com/v0/b/cda-darkflow.appspot.com/o/drone/DJI_0895.JPG?alt=media&token=6ae4b27e-fcd6-4f39-8c72-ca30ed55d987
+15:36/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x0000023E0F9CF460>
+15:36/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023E0FAFCFE0>
+15:38/24-8-2023 -> Initializing predictor.py.
+15:38/24-8-2023 -> Loading model darkflow-test.pt
+15:38/24-8-2023 -> URL: https://firebasestorage.googleapis.com/v0/b/cda-darkflow.appspot.com/o/drone/Hirschfeldia_incana.jpg?alt=media&token=97e41b76-4409-4b8b-be69-4e35a248fc2b
+15:38/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x0000023E0F9CF760>
+15:38/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023E142FADE0>
+15:38/24-8-2023 -> Initializing predictor.py.
+15:38/24-8-2023 -> Loading model darkflow-test.pt
+15:38/24-8-2023 -> URL: https://www.ecoregistros.org/site/images/dataimages/2021/06/03/447923/Hirschfeldia-DSC04235--2-.JPG
+15:38/24-8-2023 -> <urllib3.response.HTTPResponse object at 0x0000023E14312B00>
+15:38/24-8-2023 -> f090390f-2b38-4721-bae8-e281b2103c4d.jpg : {'timestamp': 1692902318, 'detected_labels': ['Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.25', 'bbox': {'x1': 2, 'y1': 0, 'x2': 124, 'y2': 146}}]}
+15:39/24-8-2023 -> Initializing main.py.
+15:39/24-8-2023 -> Initializing predictor.py.
+15:39/24-8-2023 -> Loading model darkflow-test.pt
+15:39/24-8-2023 -> 297a2756-25c4-444a-af3c-db1a152b4ef3.jpg : {'timestamp': 1692902368, 'detected_labels': ['Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.35', 'bbox': {'x1': 216, 'y1': 0, 'x2': 616, 'y2': 354}}]}
+15:44/24-8-2023 -> Initializing predictor.py.
+15:44/24-8-2023 -> Loading model darkflow-test.pt
+15:44/24-8-2023 -> c3ef6a8d-bd36-404e-8ea8-e4ae23176646.jpg : {'timestamp': 1692902647, 'detected_labels': ['Hirschfeldia Incana', 'Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.49', 'bbox': {'x1': 210, 'y1': 124, 'x2': 640, 'y2': 360}}, {'object_name': 'Hirschfeldia Incana', 'confidence': '0.38', 'bbox': {'x1': 323, 'y1': 147, 'x2': 640, 'y2': 360}}]}
+15:47/24-8-2023 -> Initializing main.py.
+15:47/24-8-2023 -> Initializing main.py.
+15:47/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:48/24-8-2023 -> Initializing main.py.
+15:49/24-8-2023 -> Initializing main.py.
+15:50/24-8-2023 -> Initializing main.py.
+16:22/24-8-2023 -> Initializing predictor.py.
+16:22/24-8-2023 -> Loading model yolov8n.pt
+16:22/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x00000158F9B480E0>
+16:22/24-8-2023 -> Initializing predictor.py.
+16:22/24-8-2023 -> Loading model yolov8n.pt
+16:23/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x00000158F9B32ED0>
+16:23/24-8-2023 -> Initializing predictor.py.
+16:23/24-8-2023 -> Loading model yolov8n.pt
+16:24/24-8-2023 -> Exception at task() instance: list index out of range
+16:24/24-8-2023 -> 68a02015-93e5-439d-8843-2846909905d6.jpg : None
+16:25/24-8-2023 -> Initializing predictor.py.
+16:25/24-8-2023 -> Loading model yolov8n.pt
+16:25/24-8-2023 -> Exception at task() instance: list index out of range
+16:25/24-8-2023 -> ad002805-a7a3-4bee-abe4-c0eaa9a73ef7.jpg : None
+16:27/24-8-2023 -> Initializing predictor.py.
+16:27/24-8-2023 -> Loading model yolov8n.pt
+16:27/24-8-2023 -> Exception at task() instance: list index out of range
+16:27/24-8-2023 -> 32c3e5cc-af43-4ff0-ad1d-115c00b69368.jpg : None
+16:27/24-8-2023 -> Initializing main.py.
+16:28/24-8-2023 -> Initializing main.py.
+16:28/24-8-2023 -> Initializing predictor.py.
+16:28/24-8-2023 -> Loading model yolov8n.pt
+16:28/24-8-2023 -> Exception at task() instance: list index out of range
+16:28/24-8-2023 -> f58e760a-f2df-44c8-9ad7-510a79956ad8.jpg : None
+16:28/24-8-2023 -> Initializing main.py.
+16:28/24-8-2023 -> Initializing predictor.py.
+16:28/24-8-2023 -> Loading model yolov8n.pt
+16:28/24-8-2023 -> Exception at task() instance: list index out of range
+16:28/24-8-2023 -> 7a7fc9ff-662f-4f4e-ac55-cd705bf1bc45.jpg : None
+16:29/24-8-2023 -> Initializing main.py.
+16:29/24-8-2023 -> Initializing main.py.
+16:29/24-8-2023 -> Initializing predictor.py.
+16:29/24-8-2023 -> Loading model yolov8n.pt
+16:29/24-8-2023 -> Exception at task() instance: list index out of range
+16:29/24-8-2023 -> 7a66858a-56e8-45ad-955b-80317a2c4827.jpg : None
+16:30/24-8-2023 -> Initializing predictor.py.
+16:30/24-8-2023 -> Loading model darkflow-test.pt
+16:30/24-8-2023 -> ef9c6a47-3a01-4919-b2dc-7b16f2277951.jpg : {'timestamp': 1692905413, 'detected_labels': ['None'], 'metadata': ['None']}
+16:30/24-8-2023 -> Initializing predictor.py.
+16:30/24-8-2023 -> Loading model yolov8n.pt
+16:30/24-8-2023 -> Exception at task() instance: list index out of range
+16:30/24-8-2023 -> 81c539a2-5ced-466c-bb9c-eb819b4334fa.jpg : None
+16:32/24-8-2023 -> Initializing predictor.py.
+16:32/24-8-2023 -> Loading model yolov8n.pt
+16:33/24-8-2023 -> Exception at task() instance: list index out of range
+16:33/24-8-2023 -> c5ec51cd-b6f5-4ed4-8f57-dcf43f1b4b52.jpg : None
+16:33/24-8-2023 -> Initializing main.py.
+16:33/24-8-2023 -> Initializing main.py.
+16:34/24-8-2023 -> Initializing main.py.
+16:34/24-8-2023 -> Initializing main.py.
+16:34/24-8-2023 -> Initializing predictor.py.
+16:34/24-8-2023 -> Loading model yolov8n.pt
+16:34/24-8-2023 -> Exception at main() instance: list index out of range
+16:34/24-8-2023 -> 25086911-899f-444b-8848-036cc0b64db4.jpg : None
+16:35/24-8-2023 -> Initializing main.py.
+16:35/24-8-2023 -> Initializing main.py.
+16:35/24-8-2023 -> Initializing main.py.
+16:35/24-8-2023 -> Initializing main.py.
+16:35/24-8-2023 -> Initializing predictor.py.
+16:35/24-8-2023 -> Loading model yolov8n.pt
+16:35/24-8-2023 -> Exception at classification() instance: list index out of range
+16:35/24-8-2023 -> c3a11bae-7d80-48a1-a4f0-bdee850099b6.jpg : None
+16:36/24-8-2023 -> Initializing main.py.
+16:36/24-8-2023 -> Initializing main.py.
+16:37/24-8-2023 -> Initializing main.py.
+16:37/24-8-2023 -> Initializing predictor.py.
+16:37/24-8-2023 -> Loading model yolov8n.pt
+16:37/24-8-2023 -> Exception at classification() instance: list index out of range
+16:37/24-8-2023 -> c6f3edde-b3ae-4ff3-8ab8-53f2241078d0.jpg : None
+16:38/24-8-2023 -> Initializing main.py.
+16:38/24-8-2023 -> Initializing main.py.
+16:38/24-8-2023 -> Initializing predictor.py.
+16:38/24-8-2023 -> Loading model yolov8n.pt
+16:38/24-8-2023 -> >> 0
+16:38/24-8-2023 -> >> 1
+16:38/24-8-2023 -> Exception at classification() instance: list index out of range
+16:38/24-8-2023 -> a5899000-113d-40c6-96c0-1faf81f1004c.jpg : None
+16:39/24-8-2023 -> Initializing main.py.
+16:39/24-8-2023 -> Initializing main.py.
+16:39/24-8-2023 -> Initializing main.py.
+16:39/24-8-2023 -> Initializing main.py.
+16:39/24-8-2023 -> Initializing predictor.py.
+16:39/24-8-2023 -> Loading model yolov8n.pt
+16:39/24-8-2023 -> >> 0
+16:39/24-8-2023 -> >> 1
+16:39/24-8-2023 -> Exception at classification() instance: list index out of range
+16:39/24-8-2023 -> 36a20d57-d20f-4e8a-a182-60f73e32938e.jpg : None
+16:41/24-8-2023 -> Initializing main.py.
+16:41/24-8-2023 -> Initializing main.py.
+16:41/24-8-2023 -> Initializing main.py.
+16:41/24-8-2023 -> Initializing predictor.py.
+16:41/24-8-2023 -> Loading model yolov8n.pt
+16:41/24-8-2023 -> >> 0
+16:41/24-8-2023 -> >> 1
+16:41/24-8-2023 -> >> 4
+16:41/24-8-2023 -> >> 5
+16:41/24-8-2023 -> >> 6
+16:41/24-8-2023 -> Exception at classification() instance: list index out of range
+16:41/24-8-2023 -> b7b0d0d0-ca5b-405e-abb6-821ea8e3f4ae.jpg : None
+16:42/24-8-2023 -> Initializing main.py.
+16:42/24-8-2023 -> Initializing main.py.
+16:42/24-8-2023 -> Initializing predictor.py.
+16:42/24-8-2023 -> Loading model yolov8n.pt
+16:42/24-8-2023 -> >> 0
+16:42/24-8-2023 -> >> 1
+16:42/24-8-2023 -> >> 4
+16:42/24-8-2023 -> >> 5
+16:42/24-8-2023 -> >> 6
+16:42/24-8-2023 -> >> 7
+16:42/24-8-2023 -> >> 8
+16:42/24-8-2023 -> >> 9
+16:42/24-8-2023 -> Exception at classification() instance: list index out of range
+16:42/24-8-2023 -> d128fa40-d0a9-40f1-acf4-8cfd72bd4cd2.jpg : None
+16:43/24-8-2023 -> Initializing main.py.
+16:43/24-8-2023 -> Initializing main.py.
+16:43/24-8-2023 -> Initializing main.py.
+16:43/24-8-2023 -> Initializing predictor.py.
+16:43/24-8-2023 -> Loading model yolov8n.pt
+16:43/24-8-2023 -> >> 0
+16:43/24-8-2023 -> >> 1
+16:43/24-8-2023 -> >> 4
+16:43/24-8-2023 -> >> 5
+16:43/24-8-2023 -> >> 6
+16:43/24-8-2023 -> >> 7
+16:43/24-8-2023 -> >> 8
+16:43/24-8-2023 -> >> 9
+16:43/24-8-2023 -> >> 10
+16:43/24-8-2023 -> Exception at classification() instance: list index out of range
+16:43/24-8-2023 -> 0cc4b995-7b2c-4b1a-bdd4-6dd881cab987.jpg : None
+16:44/24-8-2023 -> Initializing main.py.
+16:44/24-8-2023 -> Initializing main.py.
+16:44/24-8-2023 -> Initializing predictor.py.
+16:44/24-8-2023 -> Loading model yolov8n.pt
+16:44/24-8-2023 -> >> 0
+16:44/24-8-2023 -> >> 1
+16:44/24-8-2023 -> >> 4
+16:44/24-8-2023 -> >> 5
+16:44/24-8-2023 -> >> 6
+16:44/24-8-2023 -> >> 7
+16:44/24-8-2023 -> >> 8
+16:44/24-8-2023 -> >> 9
+16:44/24-8-2023 -> >> 10
+16:44/24-8-2023 -> Exception at classification() instance: cannot access local variable 'confidence' where it is not associated with a value
+16:44/24-8-2023 -> 38cb8139-cc33-4931-8dfe-1d5ae9097eeb.jpg : None
+16:44/24-8-2023 -> Initializing main.py.
+16:44/24-8-2023 -> Initializing main.py.
+16:45/24-8-2023 -> Initializing predictor.py.
+16:45/24-8-2023 -> Loading model yolov8n.pt
+16:45/24-8-2023 -> >> 0
+16:45/24-8-2023 -> >> 1
+16:45/24-8-2023 -> >> 4
+16:45/24-8-2023 -> >> 5
+16:45/24-8-2023 -> >> 6
+16:45/24-8-2023 -> >> 7
+16:45/24-8-2023 -> >> 8
+16:45/24-8-2023 -> >> 9
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> Exception at classification() instance: list index out of range
+16:45/24-8-2023 -> cd919980-1b79-4f85-a60b-5b38edadfe87.jpg : None
+16:45/24-8-2023 -> Initializing main.py.
+16:45/24-8-2023 -> Initializing predictor.py.
+16:45/24-8-2023 -> Loading model yolov8n.pt
+16:45/24-8-2023 -> >> 0
+16:45/24-8-2023 -> >> 1
+16:45/24-8-2023 -> >> 4
+16:45/24-8-2023 -> >> 5
+16:45/24-8-2023 -> >> 6
+16:45/24-8-2023 -> >> 7
+16:45/24-8-2023 -> >> 8
+16:45/24-8-2023 -> >> 9
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 10
+16:45/24-8-2023 -> ['person 0.88', 'person 0.87', 'person 0.79', 'person 0.76', 'person 0.74', 'person 0.65', 'person 0.44']
+16:45/24-8-2023 -> >> 11
+16:45/24-8-2023 -> >> 12
+16:45/24-8-2023 -> >> 2
+16:45/24-8-2023 -> 52aea7d3-e33a-44c8-b1ca-3d133ad3e0b4.jpg : {'timestamp': 1692906354, 'detected_labels': ['person', 'person', 'person', 'person', 'person', 'person', 'person'], 'metadata': [{'object_name': 'person', 'confidence': '0.88', 'bbox': {'x1': 210, 'y1': 67, 'x2': 437, 'y2': 412}}, {'object_name': 'person', 'confidence': '0.87', 'bbox': {'x1': 59, 'y1': 116, 'x2': 279, 'y2': 412}}, {'object_name': 'person', 'confidence': '0.79', 'bbox': {'x1': 434, 'y1': 29, 'x2': 595, 'y2': 411}}, {'object_name': 'person', 'confidence': '0.76', 'bbox': {'x1': 41, 'y1': 81, 'x2': 183, 'y2': 334}}, {'object_name': 'person', 'confidence': '0.74', 'bbox': {'x1': 170, 'y1': 22, 'x2': 237, 'y2': 125}}, {'object_name': 'person', 'confidence': '0.65', 'bbox': {'x1': 333, 'y1': 27, 'x2': 528, 'y2': 410}}, {'object_name': 'person', 'confidence': '0.44', 'bbox': {'x1': 274, 'y1': 7, 'x2': 344, 'y2': 98}}]}
+16:47/24-8-2023 -> Initializing predictor.py.
+16:47/24-8-2023 -> Loading model darkflow-test.pt
+16:47/24-8-2023 -> >> 0
+16:47/24-8-2023 -> >> 1
+16:47/24-8-2023 -> >> 4
+16:47/24-8-2023 -> >> 5
+16:47/24-8-2023 -> >> 6
+16:47/24-8-2023 -> >> 7
+16:47/24-8-2023 -> >> 8
+16:47/24-8-2023 -> >> 9
+16:47/24-8-2023 -> >> 10
+16:47/24-8-2023 -> ['Hirschfeldia Incana 0.35']
+16:47/24-8-2023 -> >> 11
+16:47/24-8-2023 -> >> 12
+16:47/24-8-2023 -> >> 2
+16:47/24-8-2023 -> ef10a465-7cde-4979-80b4-3e2c255411f7.jpg : {'timestamp': 1692906424, 'detected_labels': ['Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': 'Incana', 'bbox': {'x1': 216, 'y1': 0, 'x2': 616, 'y2': 354}}]}
+16:47/24-8-2023 -> Initializing main.py.
+16:47/24-8-2023 -> Initializing main.py.
+16:48/24-8-2023 -> Initializing main.py.
+16:48/24-8-2023 -> Initializing main.py.
+16:48/24-8-2023 -> Initializing predictor.py.
+16:48/24-8-2023 -> Loading model darkflow-test.pt
+16:48/24-8-2023 -> >> 0
+16:48/24-8-2023 -> >> 1
+16:48/24-8-2023 -> >> 4
+16:48/24-8-2023 -> >> 5
+16:48/24-8-2023 -> >> 6
+16:48/24-8-2023 -> >> 7
+16:48/24-8-2023 -> >> 8
+16:48/24-8-2023 -> >> 9
+16:48/24-8-2023 -> >> 10
+16:48/24-8-2023 -> ['Hirschfeldia_Incana 0.35']
+16:48/24-8-2023 -> >> 11
+16:48/24-8-2023 -> >> 12
+16:48/24-8-2023 -> >> 2
+16:48/24-8-2023 -> c625b9d2-9927-4619-b706-805b06082253.jpg : {'timestamp': 1692906495, 'detected_labels': ['Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.35', 'bbox': {'x1': 216, 'y1': 0, 'x2': 616, 'y2': 354}}]}
+16:48/24-8-2023 -> Initializing main.py.
+16:48/24-8-2023 -> Initializing main.py.
+16:49/24-8-2023 -> Initializing main.py.
+16:49/24-8-2023 -> Initializing main.py.
+16:49/24-8-2023 -> Initializing main.py.
+16:49/24-8-2023 -> Initializing main.py.
+16:49/24-8-2023 -> Initializing predictor.py.
+16:49/24-8-2023 -> Loading model darkflow-test.pt
+16:49/24-8-2023 -> >> 0
+16:49/24-8-2023 -> >> 1
+16:49/24-8-2023 -> >> 2
+16:49/24-8-2023 -> 68cc152e-9e27-4e82-b534-b1f56766d871.jpg : {'timestamp': 1692906579, 'detected_labels': ['Hirschfeldia Incana'], 'metadata': [{'object_name': 'Hirschfeldia Incana', 'confidence': '0.35', 'bbox': {'x1': 216, 'y1': 0, 'x2': 616, 'y2': 354}}]}
+16:50/24-8-2023 -> Initializing predictor.py.
+16:50/24-8-2023 -> Loading model yolov8n.pt
+16:50/24-8-2023 -> >> 0
+16:50/24-8-2023 -> >> 1
+16:50/24-8-2023 -> >> 2
+16:50/24-8-2023 -> 4a016d57-7701-4d06-85b0-ea5e224f5240.jpg : {'timestamp': 1692906641, 'detected_labels': ['person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'tie', 'person', 'person', 'person', 'person'], 'metadata': [{'object_name': 'person', 'confidence': '0.89', 'bbox': {'x1': 197, 'y1': 198, 'x2': 394, 'y2': 489}}, {'object_name': 'person', 'confidence': '0.87', 'bbox': {'x1': 313, 'y1': 362, 'x2': 486, 'y2': 511}}, {'object_name': 'person', 'confidence': '0.86', 'bbox': {'x1': 561, 'y1': 366, 'x2': 764, 'y2': 509}}, {'object_name': 'person', 'confidence': '0.85', 'bbox': {'x1': 430, 'y1': 306, 'x2': 607, 'y2': 509}}, {'object_name': 'person', 'confidence': '0.85', 'bbox': {'x1': 375, 'y1': 193, 'x2': 525, 'y2': 413}}, {'object_name': 'person', 'confidence': '0.81', 'bbox': {'x1': 484, 'y1': 135, 'x2': 618, 'y2': 327}}, {'object_name': 'person', 'confidence': '0.80', 'bbox': {'x1': 136, 'y1': 85, 'x2': 301, 'y2': 369}}, {'object_name': 'person', 'confidence': '0.80', 'bbox': {'x1': 0, 'y1': 123, 'x2': 128, 'y2': 393}}, {'object_name': 'person', 'confidence': '0.79', 'bbox': {'x1': 34, 'y1': 6, 'x2': 156, 'y2': 191}}, {'object_name': 'person', 'confidence': '0.75', 'bbox': {'x1': 84, 'y1': 374, 'x2': 312, 'y2': 511}}, {'object_name': 'person', 'confidence': '0.75', 'bbox': {'x1': 692, 'y1': 31, 'x2': 768, 'y2': 168}}, {'object_name': 'person', 'confidence': '0.73', 'bbox': {'x1': 557, 'y1': 252, 'x2': 676, 'y2': 464}}, {'object_name': 'person', 'confidence': '0.73', 'bbox': {'x1': 578, 'y1': 86, 'x2': 723, 'y2': 352}}, {'object_name': 'person', 'confidence': '0.70', 'bbox': {'x1': 234, 'y1': 21, 'x2': 349, 'y2': 211}}, {'object_name': 'person', 'confidence': '0.69', 'bbox': {'x1': 9, 'y1': 237, 'x2': 190, 'y2': 496}}, {'object_name': 'person', 'confidence': '0.68', 'bbox': {'x1': 311, 'y1': 121, 'x2': 426, 'y2': 296}}, {'object_name': 'person', 'confidence': '0.68', 'bbox': {'x1': 664, 'y1': 186, 'x2': 768, 'y2': 502}}, {'object_name': 'person', 'confidence': '0.64', 'bbox': {'x1': 73, 'y1': 88, 'x2': 190, 'y2': 240}}, {'object_name': 'person', 'confidence': '0.56', 'bbox': {'x1': 631, 'y1': 0, 'x2': 751, 'y2': 112}}, {'object_name': 'person', 'confidence': '0.51', 'bbox': {'x1': 154, 'y1': 0, 'x2': 259, 'y2': 140}}, {'object_name': 'person', 'confidence': '0.50', 'bbox': {'x1': 523, 'y1': 3, 'x2': 614, 'y2': 156}}, {'object_name': 'person', 'confidence': '0.38', 'bbox': {'x1': 468, 'y1': 70, 'x2': 550, 'y2': 224}}, {'object_name': 'tie', 'confidence': '0.35', 'bbox': {'x1': 433, 'y1': 298, 'x2': 461, 'y2': 363}}, {'object_name': 'person', 'confidence': '0.35', 'bbox': {'x1': 644, 'y1': 41, 'x2': 733, 'y2': 197}}, {'object_name': 'person', 'confidence': '0.33', 'bbox': {'x1': 353, 'y1': 36, 'x2': 461, 'y2': 205}}, {'object_name': 'person', 'confidence': '0.28', 'bbox': {'x1': 0, 'y1': 372, 'x2': 103, 'y2': 509}}, {'object_name': 'person', 'confidence': '0.25', 'bbox': {'x1': 0, 'y1': 0, 'x2': 70, 'y2': 146}}]}
+16:53/24-8-2023 -> Initializing predictor.py.
+16:53/24-8-2023 -> Loading model yolov8n.pt
+16:53/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023A5F9BFBA0>
+16:53/24-8-2023 -> Initializing predictor.py.
+16:53/24-8-2023 -> Loading model yolov8n.pt
+16:53/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023A6BEDFB50>
+16:53/24-8-2023 -> Initializing predictor.py.
+16:53/24-8-2023 -> Loading model yolov8n.pt
+16:53/24-8-2023 -> In download_image() instance: cannot identify image file <_io.BytesIO object at 0x0000023A6340C5E0>
+16:54/24-8-2023 -> Initializing predictor.py.
+16:54/24-8-2023 -> Loading model yolov8n.pt
+16:54/24-8-2023 -> >> 0
+16:54/24-8-2023 -> >> 1
+16:54/24-8-2023 -> >> 2
+16:54/24-8-2023 -> 906bd332-12f9-48c4-9b3c-a4a354c51d76.jpg : {'timestamp': 1692906875, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}
+16:55/24-8-2023 -> Initializing predictor.py.
+16:55/24-8-2023 -> Loading model yolov8n.pt
+16:55/24-8-2023 -> >> 0
+16:55/24-8-2023 -> >> 1
+16:55/24-8-2023 -> >> 2
+16:55/24-8-2023 -> d4ee1575-3c1a-41a1-9535-cb2405c86cde.jpg : {'timestamp': 1692906952, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}
+16:57/24-8-2023 -> Initializing main.py.
+16:57/24-8-2023 -> Initializing main.py.
+16:57/24-8-2023 -> Initializing predictor.py.
+16:57/24-8-2023 -> Loading model yolov8n.pt
+16:57/24-8-2023 -> >> 0
+16:57/24-8-2023 -> >> 1
+16:57/24-8-2023 -> Exception at classification() instance: 'NoneType' object has no attribute 'predict'
+16:57/24-8-2023 -> 4b91f32b-d01f-47e9-ab67-7295f1c24caa.jpg : None
+16:59/24-8-2023 -> Initializing main.py.
+16:59/24-8-2023 -> Initializing main.py.
+16:59/24-8-2023 -> Initializing predictor.py.
+16:59/24-8-2023 -> Loading model yolov8n.pt
+16:59/24-8-2023 -> >> 0
+16:59/24-8-2023 -> >> 1
+16:59/24-8-2023 -> >> 2
+16:59/24-8-2023 -> 33638da4-d9a5-4c2f-aa54-67d1a1abae1b.jpg : {'timestamp': 1692907190, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}
+17:0/24-8-2023 -> Initializing main.py.
+17:0/24-8-2023 -> Initializing main.py.
+17:0/24-8-2023 -> Initializing main.py.
+17:0/24-8-2023 -> Initializing main.py.
+17:0/24-8-2023 -> Initializing predictor.py.
+17:0/24-8-2023 -> Loading model yolov8n.pt
+17:0/24-8-2023 -> device: cpu
+17:0/24-8-2023 -> d6d9c94e-c0a7-4959-8b35-432f278d6143.jpg : {'timestamp': 1692907240, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}
+17:1/24-8-2023 -> Initializing main.py.
+17:1/24-8-2023 -> Initializing main.py.
+17:1/24-8-2023 -> Initializing main.py.
+17:1/24-8-2023 -> Initializing main.py.
+17:1/24-8-2023 -> Initializing predictor.py.
+17:1/24-8-2023 -> Loading model yolov8n.pt
+17:1/24-8-2023 -> Available device: cpu
+17:2/24-8-2023 -> Exception at classification() instance: 'NoneType' object has no attribute 'predict'
+17:2/24-8-2023 -> a9197163-e23f-458d-a179-35aa935a4516.jpg : None
+17:2/24-8-2023 -> Initializing main.py.
+17:2/24-8-2023 -> Initializing main.py.
+17:2/24-8-2023 -> Initializing predictor.py.
+17:2/24-8-2023 -> Loading model yolov8n.pt
+17:2/24-8-2023 -> Available device: cpu
+17:2/24-8-2023 -> 56e9016f-7bbc-4c92-8afb-8fa786053135.jpg : {'timestamp': 1692907365, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}
+18:8/24-8-2023 -> Initializing predictor.py.
+18:8/24-8-2023 -> Loading model yolov8n.pt
+18:8/24-8-2023 -> Available device: cpu
+18:8/24-8-2023 -> 45bc08d2-6ec2-4eda-ab12-a1fb9ba0b89f.jpg : {'timestamp': 1692911337, 'detected_labels': ['chair', 'tv', 'chair', 'potted plant', 'potted plant', 'potted plant', 'dining table', 'tv', 'tv'], 'metadata': [{'object_name': 'chair', 'confidence': '0.82', 'bbox': {'x1': 1133, 'y1': 861, 'x2': 1308, 'y2': 1175}}, {'object_name': 'tv', 'confidence': '0.79', 'bbox': {'x1': 2047, 'y1': 740, 'x2': 2292, 'y2': 874}}, {'object_name': 'chair', 'confidence': '0.73', 'bbox': {'x1': 1338, 'y1': 819, 'x2': 1519, 'y2': 1071}}, {'object_name': 'potted plant', 'confidence': '0.66', 'bbox': {'x1': 1557, 'y1': 652, 'x2': 1703, 'y2': 936}}, {'object_name': 'potted plant', 'confidence': '0.56', 'bbox': {'x1': 0, 'y1': 476, 'x2': 395, 'y2': 984}}, {'object_name': 'potted plant', 'confidence': '0.45', 'bbox': {'x1': 861, 'y1': 669, 'x2': 984, 'y2': 896}}, {'object_name': 'dining table', 'confidence': '0.45', 'bbox': {'x1': 737, 'y1': 837, 'x2': 1424, 'y2': 1192}}, {'object_name': 'tv', 'confidence': '0.34', 'bbox': {'x1': 1057, 'y1': 795, 'x2': 1162, 'y2': 901}}, {'object_name': 'tv', 'confidence': '0.27', 'bbox': {'x1': 1968, 'y1': 860, 'x2': 2308, 'y2': 1065}}]}

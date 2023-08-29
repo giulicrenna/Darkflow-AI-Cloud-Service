@@ -25,7 +25,8 @@ def download_image(url: str) -> str:
     try:
         image_name: str = str(uuid.uuid4()) + '.jpg'
         image_path: str = os.path.join(DOWNLOAD_PATH, image_name)
-        img = Image.open(requests.get(url, stream = True).raw)
+        image_bytes: bytes = requests.get(url, stream = True).raw
+        img = Image.open(image_bytes)
         img.save(image_path)
 
         return image_path
@@ -53,7 +54,6 @@ def classification(model: Predictor,
             """
             encoded_str: str = base64.b64encode(image.read())    
             pred : dict = model.predict_from_b64(encoded_str)
-
             """
             Upload the JSON with the name of the file
             """
@@ -63,7 +63,7 @@ def classification(model: Predictor,
             return pred
 
     except Exception as e:
-        msg: str = f'Exception at task() instance: {e}' 
+        msg: str = f'Exception at {classification.__name__}() instance: {e}' 
         log(msg)
 
 def task(model: str, img_arr: list) -> None:
@@ -91,8 +91,6 @@ run : object = FastAPI()
 async def root() -> None:
      return {'status' : 'ok'}
      
-@run.post("/simple_detection")
-async def simple_detection(item : TaskPetition):     
     try:       
         MODEL: str = os.path.join(MODELS_PATH, item.model)
         
@@ -110,6 +108,44 @@ async def simple_detection(item : TaskPetition):
     
     return {'Status' : 'Task Initialized Succesfully'}
 
+@run.get("/single_detection")
+async def single_detection(model: str, url: str):     
+    try:       
+        MODEL: str = os.path.join(MODELS_PATH, model)
+        
+        if not os.path.isfile(MODEL):
+            return {'Status' : 'Model does not exists'}
+        
+        my_model = Predictor(model_name=model,
+                        use_mqtt=False,
+                        show=False,
+                        save_both=False,
+                        save_predictions=False)
+  
+        image_path: str = download_image(url)
+        
+        if image_path != None:
+            result: dict = classification(my_model, image_path)
+            os.remove(image_path)
+            log(f'{os.path.basename(image_path)} : {result}')
+            return result
+        
+        return {'Status':'Could not make any inference'}
+                        
+    except Exception as error:
+        log(f'exception at simple_detection() instance: {error}')
+        return {'exception': f'{error}'}
+
+@run.get("/available_models")
+async def available_models():     
+    try:       
+        models_in_dir: list = os.listdir(MODELS_PATH)
+        return {'available_models' : models_in_dir}
+                        
+    except Exception as error:
+        log(f'exception at simple_detection() instance: {error}')
+        return {'exception': f'{error}'}
+    
 """
 if __name__ == "__main__":
     config = uvicorn.Config("main:run",

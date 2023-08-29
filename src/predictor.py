@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+import torch
 
 import os
 import socket
@@ -71,7 +72,12 @@ class Predictor:
         try:
             log(f'Loading model {self.model_name}')
             
+            device: str = "mps" if torch.backends.mps.is_available() else "cpu"
+            
+            log(f'Available device: {device}')
+            
             model = YOLO(f'{ABS_PATH}/model/{self.model_name}')
+            model.to(device)
         
             return model
         
@@ -119,25 +125,21 @@ class Predictor:
         detections = sv.Detections.from_yolov8(result)
         
         labels = [
-            f"{self.predictor_model.model.names[class_id]} {confidence:0.2f}"
+            f"{self.predictor_model.model.names[class_id]}_{confidence:0.2f}"
             for _, confidence, class_id, _
             in detections
          ]
-        
         single_labels : list = [
             f"{self.predictor_model.model.names[class_id]}"
             for _, class_id, class_id, _
             in detections
         ]
-        
         if len(single_labels) == 0:
             single_labels = ['None']
-        
         data : dict = {
             'timestamp' : calendar.timegm(time.gmtime()),
             'detected_labels' : single_labels
         } 
-        
         object_metadata : list = []
         
         for i, box in enumerate(detections.xyxy.tolist()):
@@ -148,15 +150,12 @@ class Predictor:
                 'x2' : round(xmax),
                 'y2' : round(ymax)
             } 
-            
-            confidence : int = labels[i].split(' ')[2]
-            
+            confidence : int = labels[i].split('_')[1]
             object_data : dict = {
                 'object_name' : single_labels[i],
                 'confidence' : confidence,
                 'bbox' : bbox
             }
-            
             object_metadata.append(object_data)
 
         if len(object_metadata) == 0:

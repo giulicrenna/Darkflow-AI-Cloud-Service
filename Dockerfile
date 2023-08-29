@@ -14,11 +14,12 @@ COPY src /service/src
 COPY model /service/model
 COPY requirements.txt /service/requirements.txt
 COPY main.py /service/main.py
-COPY json/firebase_key.json /service/firebase_key.json
+#COPY json/firebase_key.json /service/firebase_key.json
 COPY config.json /service/config.json
 
 WORKDIR /service
 
 RUN pip install -r requirements.txt 
 
+# uvicorn main:run --host 0.0.0.0 --port 8000
 CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "8000"]
