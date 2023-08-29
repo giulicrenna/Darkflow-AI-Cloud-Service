@@ -91,6 +91,8 @@ run : object = FastAPI()
 async def root() -> None:
      return {'status' : 'ok'}
      
+@run.post("/multiple_detection")
+async def multiple_detection(item : TaskPetition):     
     try:       
         MODEL: str = os.path.join(MODELS_PATH, item.model)
         
