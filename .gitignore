@@ -22,3 +22,5 @@ yolo_detections.log
 *.log
 model/best.pt
 model/yolov5nu.pt
+logs/service.log
+model/yolov8x.pt

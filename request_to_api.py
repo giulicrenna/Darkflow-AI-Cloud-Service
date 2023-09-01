@@ -8,6 +8,6 @@ consulta: dict = {
                  'https://firebasestorage.googleapis.com/v0/b/cda-darkflow.appspot.com/o/drone%2FDJI_0903.JPG?alt=media&token=a6dd1aa0-4168-4198-b91c-852d057af550']
 }
 
-rta = requests.post('http://190.2.104.63:8000/simple_detection', json=consulta)
+rta = requests.post('http://190.2.104.63:8000/multiple_detection', json=consulta)
 
 print(rta.text)
