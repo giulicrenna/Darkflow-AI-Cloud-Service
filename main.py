@@ -6,14 +6,16 @@ import threading
 
 from src.predictor import Predictor
 from src.config import get_config
+from src.barbecho import calculate_barbecho_percent
 from src.logger import log
 
 from PIL import Image
 from typing import List
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from pydantic import BaseModel
 import uvicorn
-
 
 DOWNLOAD_PATH: str = os.path.join(os.getcwd(), 'downloads')
 MODELS_PATH: str = os.path.join(os.getcwd(), 'model')
@@ -87,10 +89,29 @@ class TaskPetition(BaseModel):
 
 run : object = FastAPI()
 
+run.add_middleware(HTTPSRedirectMiddleware)
+run.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"], 
+)
+
 @run.get("/")
 async def root() -> None:
-     return {'status' : 'ok'}
-     
+    return {'status' : 'ok'}
+
+@run.get("/barbecho")
+async def barbecho(url: str) -> dict:
+    try:
+        IMG_PATH: str = download_image(url)
+        data: dict = calculate_barbecho_percent(IMG_PATH)
+        os.remove(IMG_PATH)
+        return data
+    except Exception as e:
+        return {'Exception' : e}
+        
 @run.post("/multiple_detection")
 async def multiple_detection(item : TaskPetition):     
     try:       
