@@ -169,7 +169,6 @@ async def available_models():
         log(f'exception at simple_detection() instance: {error}')
         return {'exception': f'{error}'}
     
-"""
 if __name__ == "__main__":
     config = uvicorn.Config("main:run",
                             host=config['api_host'],
@@ -177,5 +176,4 @@ if __name__ == "__main__":
                             log_level="info")
     server = uvicorn.Server(config)
     server.run()
-"""
     

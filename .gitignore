@@ -24,3 +24,6 @@ model/best.pt
 model/yolov5nu.pt
 logs/service.log
 model/yolov8x.pt
+main-Giuliano-.py
+Dockerfile-Giuliano-
+-Giuliano-.gitignore
