@@ -17,9 +17,9 @@ python-multipart
 clearml
 imageio
 fastapi
-firebase-admin
+#Training firebase-admin
 uvicorn
-paho-mqtt
+#Training paho-mqtt
 
 # Logging -------------------------------------
 # tensorboard>=2.13.0
@@ -28,8 +28,8 @@ paho-mqtt
 # comet
 
 # Plotting ------------------------------------
-pandas>=1.1.4
-seaborn>=0.11.0
+#Training pandas>=1.1.4
+#Training seaborn>=0.11.0
 
 # Export --------------------------------------
 # coremltools>=6.0  # CoreML export
