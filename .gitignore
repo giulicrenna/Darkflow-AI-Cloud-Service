@@ -27,3 +27,5 @@ model/yolov8x.pt
 main-Giuliano-.py
 Dockerfile-Giuliano-
 -Giuliano-.gitignore
+datasets/*
+dataset/2023-11-01_18_08_4/data.yaml

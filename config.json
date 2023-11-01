@@ -6,11 +6,12 @@
     "mqtt_port" : 1883,
     "tcp_port" : 25400,
 
-    "training_scheme" : "yolov5n.pt",
-    "training_name" : "SomeName",
-    "image_size" : 720,
-    "epochs" : 10,
-    "batch" : 8,
+    "training_scheme" : "yolov8n.pt",
+    "training_name" : "Entrenamiento_de_prueba",
+    "image_size" : 1080,
+    "epochs" : 5,
+    "batch" : 64,
+    "device" : "cpu",
 
     "api_host": "0.0.0.0",
     "api_port" : 80
