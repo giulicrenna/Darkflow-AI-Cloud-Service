@@ -1,37 +1,35 @@
 from ultralytics import YOLO
-from PIL import Image
-import cv2
 import os
+import argparse
 
 os.system('cls')
+MODEL_PATH: str = os.path.join(os.getcwd(), 'model')
 
-available_models : list = os.listdir('model')
+parser = argparse.ArgumentParser(description='YOLO Trainer from Darkflow API')
+parser.add_argument('-u', '--url', type=str, help='Url to the dataset')
+parser.add_argument('-m', '--model', type=str, help='Url to the dataset')
 
-print('Modelos disponibles:')
-print('#'*50)
-for i in available_models:
-    print(f'\t> {i}')
+args = parser.parse_args()
 
-model_name : str = input("\n\nModelo a seleccionar: ")
-url : str = input('url: ')
-conf : int = 0.25  
+url: str = args.url
+model_name: str = args.model
+conf: int = 0.25  
 
-if model_name not in available_models:
-    print('Modelo Inexistente')
-else:
-    model = YOLO(f"model/{model_name}")
+available_models: list = os.listdir(MODEL_PATH)
 
 if __name__ == '__main__':
-    results = model.predict(source=url,
-                            show=True,
-                            save=True,
-                            conf=conf,
-                            )
-    print(results)
+    if model_name not in available_models:
+        print('Modelo Inexistente')
+    else:
+        model = YOLO(os.path.join(MODEL_PATH, model_name))
+        results = model.predict(source=url,
+                                show=False,
+                                save=True,
+                                conf=conf,
+                                )
+        print(results)
     
     
 """
 https://www.jardineros.mx/site/qanda/135623/1924/1924_croped.jpg
-
-
 """

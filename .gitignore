@@ -29,3 +29,4 @@ Dockerfile-Giuliano-
 -Giuliano-.gitignore
 datasets/*
 dataset/2023-11-01_18_08_4/data.yaml
+dataset/2023-11-02_15_23_0/training/labels/9ab41826-28d6-45ab-bb87-eaeb249138d3.txt
