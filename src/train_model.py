@@ -89,12 +89,14 @@ def create_dataset(source: dict = data_source) -> str:
     
     # SPLIT THE VALIDATION AND TRAINING SET
     images_len: int = len(images_data)
-    train_len: int = math.ceil(images_len//4 * 3) if images_len != 1 else 1
+    train_len: int = math.ceil(images_len//3 * 2) if images_len != 1 else 1
+    print(f'Traing len: {train_len}')
     count: int = 0
     
     for data in images_data: # EACH IMAGE
         DIRECTORY_IMAGE: str = TRAINING_IMAGES_PATH if count <= train_len else VALIDATION_IMAGES_PATH
         DIRECTORY_LABEL: str = TRAINING_LABELS_PATH if count <= train_len else VALIDATION_LABELS_PATH
+        count += 1
         
         image_name: str = data["id"]
         image_url: str = data["image"]
