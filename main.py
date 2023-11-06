@@ -23,13 +23,18 @@ config: dict = get_config()
 
 log(f'Initializing {os.path.basename(__file__)}.')
 
+
+def download_image(url: str, path: str) -> None:
+    img_data = requests.get(url).content
+    
+        
 def download_image(url: str) -> str:
     try:
         image_name: str = str(uuid.uuid4()) + '.jpg'
         image_path: str = os.path.join(DOWNLOAD_PATH, image_name)
-        image_bytes: bytes = requests.get(url, stream = True).raw
-        img = Image.open(image_bytes)
-        img.save(image_path)
+        image_bytes: bytes = requests.get(url).content
+        with open(image_path, 'wb') as handler:
+            handler.write(image_bytes)
 
         return image_path
     except Exception as e:
