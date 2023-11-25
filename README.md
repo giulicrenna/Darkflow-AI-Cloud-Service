@@ -10,14 +10,18 @@ sudo docker build -t api .
 ```
 To run the container image:
 ```
+docker-compose up -d
+
+or
+
 docker run -d --name api -p 8000:8000 -v ~/api_logs:/service/logs --restart=always api
 ```
 
 ## Dependencies
 ---
 
-- python3
-- python3-pip
+- python3.11
+- python3.11-pip
 - libgl1-mesa-dev
 
 ## Available Models

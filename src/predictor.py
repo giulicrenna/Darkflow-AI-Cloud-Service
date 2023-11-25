@@ -114,8 +114,9 @@ class Predictor:
     def predict_from_b64(self, b64_image: str,
                          filename = str(uuid.uuid4()),
                          extra_data: dict = {}) -> str:
-        img = imread(io.BytesIO(base64.b64decode(b64_image)))
         
+        img = imread(io.BytesIO(base64.b64decode(b64_image)))
+    
         frame = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
         
         result : YOLO = self.predictor_model.predict(frame,
@@ -129,11 +130,13 @@ class Predictor:
             for _, confidence, class_id, _
             in detections
          ]
+        
         single_labels : list = [
             f"{self.predictor_model.model.names[class_id]}"
             for _, class_id, class_id, _
             in detections
         ]
+        
         if len(single_labels) == 0:
             single_labels = ['None']
         data : dict = {
@@ -145,10 +148,12 @@ class Predictor:
         for i, box in enumerate(detections.xyxy.tolist()):
             xmin, ymin, xmax, ymax = box
             bbox : dict = {
-                'x1' : round(xmin),
-                'y1' : round(ymin),
-                'x2' : round(xmax),
-                'y2' : round(ymax)
+                'height': img.shape[0],
+                'width' : img.shape[1],
+                'x1' : round(xmin, 3), 
+                'y1' : round(ymin, 3), 
+                'x2' : round(xmax, 3), 
+                'y2' : round(ymax, 3) 
             } 
             confidence : int = labels[i].split('_')[1]
             object_data : dict = {

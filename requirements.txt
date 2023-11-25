@@ -19,7 +19,7 @@ imageio
 fastapi
 #Training firebase-admin
 uvicorn
-#Training paho-mqtt
+paho-mqtt
 
 # Logging -------------------------------------
 # tensorboard>=2.13.0

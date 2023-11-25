@@ -6,13 +6,16 @@
     "mqtt_port" : 1883,
     "tcp_port" : 25400,
 
-    "training_scheme" : "yolov8n.pt",
-    "training_name" : "Entrenamiento_de_prueba",
-    "image_size" : 1080,
-    "epochs" : 5,
-    "batch" : 64,
+    "training_scheme" : "yolov8x.pt",
+    "training_name" : "modeloNuevo",
+    "image_size" : 720,
+    "epochs" : 10,
+    "batch" : 8,    
     "device" : "cpu",
 
-    "api_host": "0.0.0.0",
-    "api_port" : 80
+    "PROD_SERVER": "",
+    "DEV_SERVER": "",
+
+    "api_host": "localhost",
+    "api_port" : 80 
 }

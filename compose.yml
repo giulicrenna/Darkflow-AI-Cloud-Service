@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  inference-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ~/inference-server/models:/service/model
+      - ~/inference-server/logs:/service/logs
+    environment:
+      - PROD_SERVER="https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis"
+      - DEV_SERVER="https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis"
+    restart: always
+    container_name: inference-server

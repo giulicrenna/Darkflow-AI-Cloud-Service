@@ -8,6 +8,7 @@ from src.predictor import Predictor
 from src.config import get_config
 from src.barbecho import calculate_barbecho_percent
 from src.logger import log
+from src.utils import *
 
 from PIL import Image
 from typing import List
@@ -21,18 +22,27 @@ DOWNLOAD_PATH: str = os.path.join(os.getcwd(), 'downloads')
 MODELS_PATH: str = os.path.join(os.getcwd(), 'model')
 config: dict = get_config()
 
+class IImage(BaseModel):
+    imageId: str
+    url: str
+class Model(BaseModel):
+    name: str
+    version: str
+
+class MultipleDetection(BaseModel):
+    reportId: str
+    model: Model
+    enviroment: str
+    images: list[IImage]
+
 log(f'Initializing {os.path.basename(__file__)}.')
 
-
-def download_image(url: str, path: str) -> None:
-    img_data = requests.get(url).content
-    
-        
 def download_image(url: str) -> str:
     try:
         image_name: str = str(uuid.uuid4()) + '.jpg'
         image_path: str = os.path.join(DOWNLOAD_PATH, image_name)
         image_bytes: bytes = requests.get(url).content
+
         with open(image_path, 'wb') as handler:
             handler.write(image_bytes)
 
@@ -73,25 +83,58 @@ def classification(model: Predictor,
         msg: str = f'Exception at {classification.__name__}() instance: {e}' 
         log(msg)
 
-def task(model: str, img_arr: list) -> None:
-    my_model = Predictor(model_name=model,
+def task(data: MultipleDetection) -> None:
+    MODEL: str = os.path.join(MODELS_PATH, data.model.name)
+    
+    my_model = Predictor(model_name=MODEL,
                         use_mqtt=False,
                         show=False,
                         save_both=False,
                         save_predictions=False)
     
-    for image in img_arr:    
-        image_path: str = download_image(image)
+    # This dictionary will be sent to the darkflow server
+    
+    for image in data.images:    
+        message: dict = {}
+        message['reportId'] = data.reportId
+        message['imageId'] = image.imageId
+        
+        image_path: str = download_image(image.url)
+        
         if image_path != None:
-            result: dict = classification(my_model, image_path)
-            os.remove(image_path)
-            log(f'{os.path.basename(image_path)} : {result}')
-            #print(result)
-
-class TaskPetition(BaseModel):
-    model: str
-    img_arr: List[str]
-
+            try:
+                result: dict = classification(my_model, image_path)
+                print(f'DEBUG: {result}')
+                old_detections: list = [x for x in result['metadata']]
+                IDetection: list = []
+                
+                for i in old_detections:
+                    box: dict = xyxy_to_darkflow(i['bbox']['x1'],
+                                                i['bbox']['y1'],
+                                                i['bbox']['x2'],
+                                                i['bbox']['y2'],
+                                                i['bbox']['height'],
+                                                i['bbox']['width'])
+                    
+                    detection: dict = {
+                        'weedIdAI': i['object_name'],
+                        'box' : box
+                    }
+                    IDetection.append(detection)
+                
+                message['detections'] = IDetection
+                
+                if data.enviroment == 'PROD':
+                    requests.post(os.environ['PROD_SERVER'], message)
+                elif data.enviroment == 'DEV':
+                    requests.post(os.environ['DEV_SERVER'], message)
+                    
+                os.remove(image_path)
+                log(f'{os.path.basename(image_path)} : {message}')
+                #print(result)
+            except Exception as e:
+                log(f'Exception at task(): while trying to procces image: {e}')
+                
 run : object = FastAPI()
 
 run.add_middleware(HTTPSRedirectMiddleware)
@@ -118,18 +161,17 @@ async def barbecho(url: str) -> dict:
         return {'Exception' : e}
         
 @run.post("/multiple_detection")
-async def multiple_detection(item : TaskPetition):     
+async def multiple_detection(item : MultipleDetection):     
     try:       
-        MODEL: str = os.path.join(MODELS_PATH, item.model)
-        
-        t = threading.Thread(target=task, 
-                         args =(item.model, item.img_arr,))
-        
-        t.start()
+        MODEL: str = os.path.join(MODELS_PATH, item.model.name)
         
         if not os.path.isfile(MODEL):
             return {'Status' : 'Model does not exists'}
-                
+        
+        t = threading.Thread(target=task, 
+                         args =(item,))
+        t.start()
+        
     except Exception as error:
         log(f'exception at simple_detection() instance: {error}')
         return {'exception': f'{error}'}
@@ -173,7 +215,27 @@ async def available_models():
     except Exception as error:
         log(f'exception at simple_detection() instance: {error}')
         return {'exception': f'{error}'}
-    
+
+
+@run.get("/download_new_model")
+async def download_new_model(model_name: str, model_url: str):     
+    MODEL_PATH = os.path.join(os.getcwd(), 'model', f'{model_name}.pt')
+    try:         
+        response = requests.get(model_url)
+        if response.status_code == 200:
+            with open(MODEL_PATH, 'wb') as f:
+                f.write(response.content)
+                
+        return 200
+                        
+    except Exception as error:
+        log(f'exception at simple_detection() instance: {error}')
+        return {'exception': f'{error}'}
+
+"""
+uvicorn main:run --host localhost --port 80
+"""
+  
 if __name__ == "__main__":
     config = uvicorn.Config("main:run",
                             host=config['api_host'],
