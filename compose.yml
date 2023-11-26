@@ -6,12 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8000:80"
     volumes:
       - ~/inference-server/models:/service/model
       - ~/inference-server/logs:/service/logs
     environment:
-      - PROD_SERVER="https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis"
-      - DEV_SERVER="https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis"
+      - PROD_SERVER=https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis
+      - DEV_SERVER=https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis
+      - VIRTUAL_host=inference-server.darkflow.com.ar
     restart: always
     container_name: inference-server

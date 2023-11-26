@@ -6,7 +6,7 @@ Services for continuous object detection with YOLOv8 models and openCV
 ## **Modo de uso**
 To deploy the create the docker image, run the following command inside the folder where is the dockerfile.
 ```
-sudo docker build -t api .
+sudo docker build -t inference-server .
 ```
 To run the container image:
 ```
@@ -14,7 +14,7 @@ docker-compose up -d
 
 or
 
-docker run -d --name api -p 8000:8000 -v ~/api_logs:/service/logs --restart=always api
+docker run -d --name inference-server -p 8000:8000 -v ~/inference-server:/service/logs --restart=always inference-server
 ```
 
 ## Dependencies
