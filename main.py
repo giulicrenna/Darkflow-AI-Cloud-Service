@@ -125,9 +125,9 @@ def task(data: MultipleDetection) -> None:
                 message['detections'] = IDetection
                 
                 if data.enviroment == 'PROD':
-                    requests.post(os.environ['PROD_SERVER'], message)
+                    requests.post(os.environ['PROD_SERVER'], json = message)
                 elif data.enviroment == 'DEV':
-                    requests.post(os.environ['DEV_SERVER'], message)
+                    requests.post(os.environ['DEV_SERVER'], json = message)
                     
                 os.remove(image_path)
                 log(f'{os.path.basename(image_path)} : {message}')
