@@ -1,4 +1,5 @@
 import os
+import sys
 import base64
 import requests
 import uuid
@@ -137,9 +138,9 @@ def task(data: MultipleDetection) -> None:
                     
                 os.remove(image_path)
                 log(f'{os.path.basename(image_path)} : {message}')
-                #print(result)
             except Exception as e:
-                log(f'Exception at task(): while trying to procces image: {e}')
+                type_, val, traceback = sys.exc_info()
+                log(f'Exception at task(): while trying to procces image: \nType: {type_}\nValue: {val}\nTraceback: {traceback}')
                 
 run : object = FastAPI()
 """
