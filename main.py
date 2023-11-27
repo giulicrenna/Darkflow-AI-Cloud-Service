@@ -84,7 +84,7 @@ def classification(model: Predictor,
         log(msg)
 
 def task(data: MultipleDetection) -> None:
-    MODEL: str = os.path.join(MODELS_PATH, data.model.name)
+    MODEL: str = os.path.join(MODELS_PATH, f'{data.model.name}.pt')
     
     log(f'At task() instance: Loading {MODEL}')
     
@@ -118,12 +118,15 @@ def task(data: MultipleDetection) -> None:
                                                 i['bbox']['height'],
                                                 i['bbox']['width'])
                     
+                    print('1')
                     detection: dict = {
                         'weedIdAI': i['object_name'],
                         'box' : box
                     }
+                    print('2')
                     IDetection.append(detection)
 
+                    print('3')
                 message['detections'] = IDetection
                 
                 print(f'DEBUG: {message}')
@@ -170,11 +173,7 @@ async def barbecho(url: str) -> dict:
 @run.post("/multiple_detection")
 async def multiple_detection(item : MultipleDetection):     
     try:       
-        MODEL: str = os.path.join(MODELS_PATH, item.model.name)
-        
-        t = threading.Thread(target=task, 
-                         args =(item,))
-        t.start()
+        MODEL: str = os.path.join(MODELS_PATH, f'{item.model.name}.pt')
         
         if not os.path.isfile(MODEL):
             return {'status' : 'ERROR',
@@ -182,6 +181,10 @@ async def multiple_detection(item : MultipleDetection):
                             'message' : 'Model does not exist'
                         }
                     }
+        
+        t = threading.Thread(target=task, 
+                         args =(item,))
+        t.start()
         
         return {'status' : 'OK',
                         'error': {
