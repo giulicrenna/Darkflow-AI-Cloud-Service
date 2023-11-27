@@ -109,7 +109,7 @@ def task(data: MultipleDetection) -> None:
                 IDetection: list = []
                 
                 for i in old_detections:
-                    if i != None: 
+                    if i != 'None': 
                         box: dict = xyxy_to_darkflow(i['bbox']['x1'],
                                                     i['bbox']['y1'],
                                                     i['bbox']['x2'],
