@@ -118,15 +118,12 @@ def task(data: MultipleDetection) -> None:
                                                 i['bbox']['height'],
                                                 i['bbox']['width'])
                     
-                    print('1')
                     detection: dict = {
                         'weedIdAI': i['object_name'],
                         'box' : box
                     }
-                    print('2')
                     IDetection.append(detection)
 
-                    print('3')
                 message['detections'] = IDetection
                 
                 print(f'DEBUG: {message}')
