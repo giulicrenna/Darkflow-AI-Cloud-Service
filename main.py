@@ -75,9 +75,6 @@ def classification(model: Predictor,
             """
             Upload the JSON with the name of the file
             """
-            logging: str = f'{image_path} : {pred}' 
-            #log(logging)
-            
             return pred
 
     except Exception as e:
@@ -112,18 +109,19 @@ def task(data: MultipleDetection) -> None:
                 IDetection: list = []
                 
                 for i in old_detections:
-                    box: dict = xyxy_to_darkflow(i['bbox']['x1'],
-                                                i['bbox']['y1'],
-                                                i['bbox']['x2'],
-                                                i['bbox']['y2'],
-                                                i['bbox']['height'],
-                                                i['bbox']['width'])
-                    
-                    detection: dict = {
-                        'weedIdAI': i['object_name'],
-                        'box' : box
-                    }
-                    IDetection.append(detection)
+                    if i != None: 
+                        box: dict = xyxy_to_darkflow(i['bbox']['x1'],
+                                                    i['bbox']['y1'],
+                                                    i['bbox']['x2'],
+                                                    i['bbox']['y2'],
+                                                    i['bbox']['height'],
+                                                    i['bbox']['width'])
+                        
+                        detection: dict = {
+                            'weedIdAI': i['object_name'],
+                            'box' : box
+                        }
+                        IDetection.append(detection)
 
                 message['detections'] = IDetection
                 
