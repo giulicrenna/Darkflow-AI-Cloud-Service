@@ -72,7 +72,7 @@ class Predictor:
         try:
             log(f'Loading model {self.model_name}')
             
-            device: str = "mps" if torch.backends.mps() else "cpu"
+            device: str = "mps" if torch.backends.mps.is_available() else "cpu"
             
             log(f'Available device: {device}')
             
