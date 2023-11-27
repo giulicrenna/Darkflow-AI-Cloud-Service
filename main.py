@@ -175,16 +175,16 @@ async def multiple_detection(item : MultipleDetection):
     try:       
         MODEL: str = os.path.join(MODELS_PATH, f'{item.model.name}.pt')
         
+        t = threading.Thread(target=task, 
+                         args =(item,))
+        t.start()
+        
         if not os.path.isfile(MODEL):
             return {'status' : 'ERROR',
                         'error': {
                             'message' : 'Model does not exist'
                         }
                     }
-        
-        t = threading.Thread(target=task, 
-                         args =(item,))
-        t.start()
         
         return {'status' : 'OK',
                         'error': {
