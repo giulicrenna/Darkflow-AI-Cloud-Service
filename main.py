@@ -136,7 +136,7 @@ def task(data: MultipleDetection) -> None:
                 log(f'Exception at task(): while trying to procces image: {e}')
                 
 run : object = FastAPI()
-
+"""
 run.add_middleware(HTTPSRedirectMiddleware)
 run.add_middleware(
     CORSMiddleware,
@@ -145,6 +145,7 @@ run.add_middleware(
     allow_methods=["*"],  
     allow_headers=["*"], 
 )
+"""
 
 @run.get("/")
 async def root() -> None:
@@ -166,15 +167,28 @@ async def multiple_detection(item : MultipleDetection):
         MODEL: str = os.path.join(MODELS_PATH, item.model.name)
         
         if not os.path.isfile(MODEL):
-            return {'Status' : 'Model does not exists'}
+            return {'status' : 'ERROR',
+                        'error': {
+                            'message' : 'Model does not exist'
+                        }
+                    }
         
         t = threading.Thread(target=task, 
                          args =(item,))
         t.start()
         
+        return {'status' : 'OK',
+                        'error': {
+                            'message' : 'Task Initialized Succesfully'
+                        }
+                    }
     except Exception as error:
         log(f'exception at simple_detection() instance: {error}')
-        return {'exception': f'{error}'}
+        return {'status' : 'ERROR',
+                        'error': {
+                            'message' : error
+                        }
+                    }
     
     return {'Status' : 'Task Initialized Succesfully'}
 

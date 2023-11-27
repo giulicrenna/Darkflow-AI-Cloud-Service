@@ -16,6 +16,6 @@
     "PROD_SERVER": "",
     "DEV_SERVER": "",
 
-    "api_host": "localhost",
-    "api_port" : 80 
+    "api_host": "0.0.0.0",
+    "api_port" : 8000 
 }

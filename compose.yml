@@ -15,4 +15,6 @@ services:
       - DEV_SERVER=https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis
       - VIRTUAL_host=inference-server.darkflow.com.ar
     restart: always
+    expose:
+    - 8000
     container_name: inference-server
