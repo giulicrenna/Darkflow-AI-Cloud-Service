@@ -32,7 +32,7 @@ class Model(BaseModel):
 class MultipleDetection(BaseModel):
     reportId: str
     model: Model
-    enviroment: str
+    environment: str
     images: list[IImage]
 
 log(f'Initializing {os.path.basename(__file__)}.')
@@ -124,9 +124,9 @@ def task(data: MultipleDetection) -> None:
                 
                 message['detections'] = IDetection
                 
-                if data.enviroment == 'PROD':
+                if data.environment == 'PROD':
                     requests.post(os.environ['PROD_SERVER'], json = message)
-                elif data.enviroment == 'DEV':
+                elif data.environment == 'DEV':
                     requests.post(os.environ['DEV_SERVER'], json = message)
                     
                 os.remove(image_path)
