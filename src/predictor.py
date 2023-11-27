@@ -72,11 +72,11 @@ class Predictor:
         try:
             log(f'Loading model {self.model_name}')
             
-            device: str = "mps" if torch.backends.mps.is_available() else "cpu"
+            device: str = "cuda" if torch.backends.cuda.is_available() else "cpu"
             
             log(f'Available device: {device}')
             
-            model = YOLO(f'{ABS_PATH}/model/{self.model_name}')
+            model = YOLO(self.model_name)
             model.to(device)
         
             return model
