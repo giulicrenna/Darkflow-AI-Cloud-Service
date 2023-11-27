@@ -84,7 +84,9 @@ def classification(model: Predictor,
         log(msg)
 
 def task(data: MultipleDetection) -> None:
-    MODEL: str = os.path.join(MODELS_PATH, data.model.name)
+    MODEL: str = os.path.join(MODELS_PATH, f'{data.model.name}.pt')
+    
+    log(f'At task() instance: Loading {MODEL}')
     
     my_model = Predictor(model_name=MODEL,
                         use_mqtt=False,
@@ -104,7 +106,7 @@ def task(data: MultipleDetection) -> None:
         if image_path != None:
             try:
                 result: dict = classification(my_model, image_path)
-                print(f'DEBUG: {result}')
+                
                 old_detections: list = [x for x in result['metadata']]
                 IDetection: list = []
                 
@@ -116,18 +118,25 @@ def task(data: MultipleDetection) -> None:
                                                 i['bbox']['height'],
                                                 i['bbox']['width'])
                     
+                    print('1')
                     detection: dict = {
                         'weedIdAI': i['object_name'],
                         'box' : box
                     }
+                    print('2')
                     IDetection.append(detection)
-                
+
+                    print('3')
                 message['detections'] = IDetection
                 
+                print(f'DEBUG: {message}')
+                
                 if data.environment == 'PROD':
-                    requests.post(os.environ['PROD_SERVER'], json = message)
+                    response: str = requests.post(config['PROD_SERVER'], json = message).text
+                    log(response)
                 elif data.environment == 'DEV':
-                    requests.post(os.environ['DEV_SERVER'], json = message)
+                    response: str = requests.post(config['DEV_SERVER'], json = message).text
+                    log(response)
                     
                 os.remove(image_path)
                 log(f'{os.path.basename(image_path)} : {message}')
@@ -190,7 +199,11 @@ async def multiple_detection(item : MultipleDetection):
                         }
                     }
     
-    return {'Status' : 'Task Initialized Succesfully'}
+    return {'status' : 'OK',
+                        'error': {
+                            'message' : 'Task Initialized Succesfully'
+                        }
+                    }
 
 @run.get("/single_detection")
 async def single_detection(model: str, url: str):     
