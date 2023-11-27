@@ -173,7 +173,7 @@ async def barbecho(url: str) -> dict:
 @run.post("/multiple_detection")
 async def multiple_detection(item : MultipleDetection):     
     try:       
-        MODEL: str = os.path.join(MODELS_PATH, item.model.name)
+        MODEL: str = os.path.join(MODELS_PATH, f'{item.model.name}.pt')
         
         if not os.path.isfile(MODEL):
             return {'status' : 'ERROR',
