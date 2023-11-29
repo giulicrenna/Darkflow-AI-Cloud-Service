@@ -133,7 +133,10 @@ def task(data: MultipleDetection) -> None:
                 elif data.environment == 'DEV':
                     response: str = requests.post(config['DEV_SERVER'], json = message).text
                     log(response)
-                    
+                
+                response: str = requests.post(config['END_DEV_SERVER'], json = {"reportId": data.reportId}).text
+                log(response)
+                
                 os.remove(image_path)
                 log(f'{os.path.basename(image_path)} : {message}')
             except Exception as e:
@@ -184,7 +187,7 @@ async def multiple_detection(item : MultipleDetection):
         
         return {'status' : 'OK',
                         'error': {
-                            'message' : 'Task Initialized Succesfully'
+                            'message' : None
                         }
                     }
     except Exception as error:
