@@ -12,10 +12,12 @@ import os
 parser = argparse.ArgumentParser(description='YOLO Trainer from Darkflow API')
 parser.add_argument('-u', '--url', type=str, help='Url to the dataset')
 parser.add_argument('-d', '--device', type=str, help='Device')
+parser.add_argument('-e', '--epochs', type=str, help='Epochs')
 args = parser.parse_args()
 data_source: dict = {
     "url" : args.url,
-    "device": args.device
+    "device": args.device,
+    "epochs": args.epochs
 }
 
 config: dict = get_config()
@@ -197,7 +199,7 @@ if __name__ == '__main__':
                 training_name=train_name,
                 model_name=model,
                 imgsz=size,
-                epochs=epochs,
+                epochs=data_source["epochs"],
                 batchsz=batch,
                 device=data_source["device"])
     
