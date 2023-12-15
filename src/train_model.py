@@ -111,7 +111,7 @@ def create_dataset(source: dict = data_source) -> str:
         
         for detection in images_detetions: # EACH  DETECTION
             # DETERMINE THE FIGURE CLASS
-            CURRENT_CLASS: str = detection["weed"]["name"]
+            CURRENT_CLASS: str = detection["weed"]["id"]
             dataset_classes.append(CURRENT_CLASS)
             dataset_classes = list(set(dataset_classes))
             CLASS: int = dataset_classes.index(CURRENT_CLASS)
