@@ -199,7 +199,7 @@ if __name__ == '__main__':
                 training_name=train_name,
                 model_name=model,
                 imgsz=size,
-                epochs=data_source["epochs"],
+                epochs=int(data_source["epochs"]),
                 batchsz=batch,
                 device=data_source["device"])
     
