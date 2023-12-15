@@ -9,14 +9,13 @@
     "training_scheme" : "yolov8x.pt",
     "training_name" : "darkflow_test_2",
     "image_size" : 720,
-    "epochs" : 20,
+    "epochs" : 10,
     "batch" : 8,    
     "device" : "cpu",
 
     "PROD_SERVER": "https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis",
     "DEV_SERVER": "https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis",
-    "END_DEV_SERVER": "https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/inform-analysis-end",
-    
+
     "api_host": "localhost",
     "api_port" : 8000 
 }

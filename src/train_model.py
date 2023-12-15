@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser(description='YOLO Trainer from Darkflow API')
 parser.add_argument('-u', '--url', type=str, help='Url to the dataset')
 parser.add_argument('-d', '--device', type=str, help='Device')
 parser.add_argument('-e', '--epochs', type=str, help='Epochs')
+parser.add_argument('-b', '--batch', type=str, help='Batch size')
 args = parser.parse_args()
 data_source: dict = {
     "url" : args.url,
@@ -179,14 +180,13 @@ def train_model(yaml_path: str,
        epochs=epochs,
        batch=batchsz,
        name=training_name,
-       device=device
     )
     return results
 
 if __name__ == '__main__':
-    DS_PATH: str = create_dataset()
+    #DS_PATH: str = create_dataset()
     
-    yaml_ : str = os.path.join(DS_PATH, 'data.yaml')
+    yaml_ : str = os.path.join(os.getcwd(),'dataset/2023-12-15_14_33_1', 'data.yaml')
     
     train_name : str = config['training_name']
     size: int = config['image_size']
@@ -199,7 +199,7 @@ if __name__ == '__main__':
                 training_name=train_name,
                 model_name=model,
                 imgsz=size,
-                epochs=int(data_source["epochs"]),
-                batchsz=batch,
-                device=data_source["device"])
+                epochs=int(args.epochs),
+                batchsz=int(args.batch),
+                device=args.device)
     
