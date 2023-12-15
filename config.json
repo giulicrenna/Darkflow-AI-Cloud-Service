@@ -9,7 +9,7 @@
     "training_scheme" : "yolov8x.pt",
     "training_name" : "darkflow_test_2",
     "image_size" : 720,
-    "epochs" : 50,
+    "epochs" : 20,
     "batch" : 8,    
     "device" : "cpu",
 
