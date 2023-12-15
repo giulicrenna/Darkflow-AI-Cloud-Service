@@ -11,7 +11,7 @@
     "image_size" : 720,
     "epochs" : 50,
     "batch" : 8,    
-    "device" : "gpu",
+    "device" : "cpu",
 
     "PROD_SERVER": "https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis",
     "DEV_SERVER": "https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis",
