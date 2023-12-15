@@ -111,6 +111,7 @@ def create_dataset(source: dict = data_source) -> str:
         
         for detection in images_detetions: # EACH  DETECTION
             # DETERMINE THE FIGURE CLASS
+            print(f'[DEBUG] {detection}')
             CURRENT_CLASS: str = detection["weed"]["id"]
             dataset_classes.append(CURRENT_CLASS)
             dataset_classes = list(set(dataset_classes))
