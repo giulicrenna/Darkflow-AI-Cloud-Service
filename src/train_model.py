@@ -17,8 +17,6 @@ parser.add_argument('-b', '--batch', type=str, help='Batch size')
 args = parser.parse_args()
 data_source: dict = {
     "url" : args.url,
-    "device": args.device,
-    "epochs": args.epochs
 }
 
 config: dict = get_config()
@@ -184,9 +182,9 @@ def train_model(yaml_path: str,
     return results
 
 if __name__ == '__main__':
-    #DS_PATH: str = create_dataset()
+    DS_PATH: str = create_dataset()
     
-    yaml_ : str = os.path.join(os.getcwd(),'dataset/2023-12-15_14_33_1', 'data.yaml')
+    yaml_ : str = os.path.join(DS_PATH, 'data.yaml')
     
     train_name : str = config['training_name']
     size: int = config['image_size']
