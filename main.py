@@ -92,9 +92,8 @@ def task(data: MultipleDetection) -> None:
                         save_both=False,
                         save_predictions=False)
     
-    # This dictionary will be sent to the darkflow server
-    
     for image in data.images:    
+        # This dictionary will be sent to the darkflow server
         message: dict = {}
         message['reportId'] = data.reportId
         message['imageId'] = image.imageId
@@ -133,13 +132,16 @@ def task(data: MultipleDetection) -> None:
                 elif data.environment == 'DEV':
                     response: str = requests.post(config['DEV_SERVER'], json = message).text
                     log(response)
-                    
+                
                 os.remove(image_path)
                 log(f'{os.path.basename(image_path)} : {message}')
             except Exception as e:
                 type_, val, traceback = sys.exc_info()
                 log(f'Exception at task(): while trying to procces image: \nType: {type_}\nValue: {val}\nTraceback: {traceback}')
-                
+    
+    response: str = requests.post(config['END_DEV_SERVER'], json = {"reportId": data.reportId}).text
+    log(response)
+         
 run : object = FastAPI()
 """
 run.add_middleware(HTTPSRedirectMiddleware)
@@ -184,7 +186,7 @@ async def multiple_detection(item : MultipleDetection):
         
         return {'status' : 'OK',
                         'error': {
-                            'message' : 'Task Initialized Succesfully'
+                            'message' : None
                         }
                     }
     except Exception as error:
