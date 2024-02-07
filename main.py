@@ -28,6 +28,7 @@ config: dict = get_config()
 class IImage(BaseModel):
     imageId: str
     url: str
+    
 class Model(BaseModel):
     name: str
     version: str
@@ -145,6 +146,7 @@ def task(data: MultipleDetection) -> None:
     log(response)
          
 run : object = FastAPI()
+
 """
 run.add_middleware(HTTPSRedirectMiddleware)
 run.add_middleware(
@@ -162,16 +164,18 @@ async def root() -> None:
 
 @run.post("/thumbnail")
 async def thumbnail(file: UploadFile = File(...)) -> StreamingResponse:
-    SIZE: tuple = (800, 200)
-    img: Image = Image.open(io.BytesIO(await file.read()))
-    img.thumbnail(SIZE)
-    
-    buffered = io.BytesIO()
-    img.save(buffered, format="WEBP")
-    buffered.seek(0)
-    
-    return StreamingResponse(io.BytesIO(img), media_type="image/webp")
-    
+    try:
+        SIZE: tuple = (800, 200)
+        img: Image = Image.open(io.BytesIO(await file.read()))
+        img.thumbnail(SIZE)
+        
+        buffered = io.BytesIO()
+        img.save(buffered, format="WEBP")
+        buffered.seek(0)
+        
+        return StreamingResponse(buffered, media_type="image/webp")
+    except Exception as e:
+        return {"exception": e}
     
 @run.get("/barbecho")
 async def barbecho(url: str) -> dict:
