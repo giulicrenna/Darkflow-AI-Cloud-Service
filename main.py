@@ -161,7 +161,7 @@ async def root() -> None:
     return {'status' : 'ok'}
 
 @run.post("/thumbnail")
-async def thumbnail(file: UploadFile = File(...)) -> File:
+async def thumbnail(file: UploadFile = File(...)) -> StreamingResponse:
     SIZE: tuple = (800, 200)
     img: Image = Image.open(io.BytesIO(await file.read()))
     img.thumbnail(SIZE)
