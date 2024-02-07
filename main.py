@@ -2,6 +2,7 @@ import os
 import sys
 import base64
 import requests
+import io
 import uuid
 import threading
 
@@ -12,8 +13,9 @@ from src.logger import log
 from src.utils import *
 
 from PIL import Image
-from typing import List
-from fastapi import FastAPI
+from typing import Annotated
+from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 from pydantic import BaseModel
@@ -158,6 +160,19 @@ run.add_middleware(
 async def root() -> None:
     return {'status' : 'ok'}
 
+@run.post("/thumbnail")
+async def thumbnail(file: UploadFile = File(...)) -> File:
+    SIZE: tuple = (800, 200)
+    img: Image = Image.open(io.BytesIO(await file.read()))
+    img.thumbnail(SIZE)
+    
+    buffered = io.BytesIO()
+    img.save(buffered, format="WEBP")
+    buffered.seek(0)
+    
+    return StreamingResponse(io.BytesIO(img), media_type="image/webp")
+    
+    
 @run.get("/barbecho")
 async def barbecho(url: str) -> dict:
     try:
