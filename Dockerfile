@@ -12,7 +12,7 @@ COPY . /service/
 
 WORKDIR /service
 
-RUN pip install -r requirements.txt 
+RUN pip3 install -r requirements.txt 
 
 # uvicorn main:run --host 0.0.0.0 --port 8000
-CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main:run", "--host", "0.0.0.0", "--port", "8000"]

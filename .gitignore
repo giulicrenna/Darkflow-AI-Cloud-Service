@@ -50,3 +50,4 @@ dataset/2023-11-05_22_07_5/training/labels/5d4c6018-68d6-4bbe-b370-42e3eecd7a10.
 dataset/2023-11-05_22_07_5/training/labels.cache
 dataset/2023-11-05_22_07_5/data.yaml
 model/entrenamiento_prueba.pt
+.venv.ubuntu

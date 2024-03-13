@@ -17,4 +17,3 @@ services:
     restart: always
     expose:
     - 8000
-    container_name: inference-server

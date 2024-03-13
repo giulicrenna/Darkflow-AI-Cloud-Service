@@ -14,7 +14,7 @@ from src.utils import *
 
 from PIL import Image
 from typing import Annotated
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
@@ -175,7 +175,7 @@ async def thumbnail(file: UploadFile = File(...)) -> StreamingResponse:
         
         return StreamingResponse(buffered, media_type="image/webp")
     except Exception as e:
-        return {"exception": e}
+        raise HTTPException(status_code=500, detail=str(e))
     
 @run.get("/barbecho")
 async def barbecho(url: str) -> dict:

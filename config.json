@@ -16,6 +16,6 @@
     "PROD_SERVER": "https://jrkenyomxwtanrwiyrha.supabase.co/functions/v1/set-analysis",
     "DEV_SERVER": "https://dsgmzpmadgogiksffrpc.supabase.co/functions/v1/set-analysis",
 
-    "api_host": "localhost",
+    "api_host": "0.0.0.0",
     "api_port" : 8000 
 }
