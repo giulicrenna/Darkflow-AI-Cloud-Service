@@ -51,3 +51,5 @@ dataset/2023-11-05_22_07_5/training/labels.cache
 dataset/2023-11-05_22_07_5/data.yaml
 model/entrenamiento_prueba.pt
 .venv.ubuntu
+tempCodeRunnerFile.py
+*.png
